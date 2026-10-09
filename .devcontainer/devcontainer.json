@@ -1,0 +1,13 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/jsburckhardt/devcontainer-features/actionlint:1": {},
+		"ghcr.io/flexwie/devcontainer-features/op:1": {},
+		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {},
+		"ghcr.io/wxw-matt/devcontainer-features/script_runner:0": {},
+		"ghcr.io/devcontainers-extra/features/actionlint:1": {},
+		"ghcr.io/dotnet/aspire-devcontainer-feature/dotnetaspire:1": {},
+		"ghcr.io/devcontainer-config/features/dot-config:5": {},
+		"ghcr.io/postfinance/devcontainer-features/dotnet:1": {}
+	}
+}
