@@ -1,0 +1,236 @@
+/* Tokens NexaWeb Mali (équivalent CSS des variables Sass du cahier des charges, § 6.4) */
+:root {
+    --nx-nav-h: 64px;
+    --nx-navy: #16213C;
+    --nx-green: #3E8E63;
+    --nx-green-dark: #2F7350;
+    --nx-gold: #C99A2E;
+    --nx-gray-50: #F4F6FA;
+    --nx-gray-600: #55607A;
+    --bs-primary: #16213C;
+    --bs-primary-rgb: 22, 33, 60;
+    --bs-body-color: #16213C;
+    --bs-body-color-rgb: 22, 33, 60;
+    --bs-border-radius: .5rem;
+    --bs-body-line-height: 1.6;
+    --bs-font-sans-serif: Inter, "Segoe UI", Calibri, Arial, sans-serif
+}
+
+body {
+    padding-top: var(--nx-nav-h)
+}
+
+h1,
+h2,
+h3,
+.nx-word {
+    font-family: Lora, Georgia, Cambria, serif;
+    font-weight: 700
+}
+
+h1 {
+    font-size: clamp(2.25rem, 5vw, 3.25rem)
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem)
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem)
+}
+
+a {
+    color: var(--nx-green-dark)
+}
+
+:focus-visible {
+    outline: 3px solid var(--nx-green-dark);
+    outline-offset: 2px
+}
+
+.nx-dark :focus-visible,
+.nx-navbar :focus-visible,
+.nx-footer :focus-visible {
+    outline-color: var(--nx-gold)
+}
+
+.nx-muted {
+    color: var(--nx-gray-600)
+}
+
+.nx-dark .nx-muted {
+    color: #C5CCDD
+}
+
+.btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: .5rem
+}
+
+.btn-nx {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--nx-green-dark);
+    --bs-btn-border-color: var(--nx-green-dark);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #245c42;
+    --bs-btn-hover-border-color: #245c42;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #245c42
+}
+
+.btn-outline-nx {
+    --bs-btn-color: var(--nx-navy);
+    --bs-btn-border-color: var(--nx-navy);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--nx-navy);
+    --bs-btn-hover-border-color: var(--nx-navy);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--nx-navy)
+}
+
+.nx-navbar {
+    background: var(--nx-navy);
+    height: var(--nx-nav-h);
+    padding-block: 0
+}
+
+.nx-navbar .offcanvas {
+    background: var(--nx-navy)
+}
+
+.nx-navbar .nav-link {
+    width: fit-content;
+    padding: .5rem 0;
+    border-bottom: 2px solid transparent
+}
+
+.nx-navbar .nav-link.active {
+    border-bottom-color: var(--nx-gold)
+}
+
+@media(min-width:992px) {
+    .nx-navbar .offcanvas {
+        flex-grow: 1
+    }
+}
+
+.nx-brand {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #fff;
+    text-decoration: none
+}
+
+.nx-word {
+    font-size: 1.35rem;
+    line-height: 1;
+    color: #fff
+}
+
+.nx-word small {
+    display: block;
+    margin-top: .25rem;
+    font: 600 .6rem/1 Inter, "Segoe UI", Arial, sans-serif;
+    letter-spacing: .4em;
+    color: var(--nx-gold)
+}
+
+.nx-dark {
+    background: var(--nx-navy);
+    color: #fff
+}
+
+.nx-dark h1,
+.nx-dark h2 {
+    color: #fff
+}
+
+.nx-alt {
+    background: var(--nx-gray-50)
+}
+
+@media(min-width:992px) {
+    .nx-hero {
+        background: var(--nx-navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cpath d='M40 60L160 130L120 240L260 200L340 80L160 130M260 200L360 250' stroke='%233E8E63' stroke-opacity='.55' fill='none'/%3E%3Ccircle cx='40' cy='60' r='6' fill='%23C99A2E'/%3E%3Ccircle cx='340' cy='80' r='6' fill='%23C99A2E'/%3E%3Cg fill='%233E8E63'%3E%3Ccircle cx='160' cy='130' r='6'/%3E%3Ccircle cx='120' cy='240' r='6'/%3E%3Ccircle cx='260' cy='200' r='6'/%3E%3Ccircle cx='360' cy='250' r='6'/%3E%3C/g%3E%3C/svg%3E") no-repeat right 4% center/min(42%, 520px)
+    }
+}
+
+.nx-card {
+    background: #fff;
+    border: 1px solid #E3E7F0;
+    border-radius: .75rem;
+    transition: transform .2s, box-shadow .2s
+}
+
+.nx-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(22, 33, 60, .1)
+}
+
+.nx-ico,
+.nx-num {
+    width: 44px;
+    height: 44px;
+    border-radius: .6rem;
+    background: rgba(62, 142, 99, .12);
+    color: var(--nx-green-dark);
+    display: grid;
+    place-items: center;
+    font-weight: 700
+}
+
+.nx-shot {
+    background: linear-gradient(135deg, var(--nx-navy), #24406B 60%, var(--nx-green));
+    color: #fff;
+    font-size: .9rem
+}
+
+.nx-shot>span {
+    display: grid;
+    place-items: center
+}
+
+.nx-footer {
+    background: var(--nx-navy);
+    color: #C5CCDD
+}
+
+.nx-footer a {
+    color: #fff
+}
+
+.nx-footer h2 {
+    font: 600 1rem Inter, "Segoe UI", Arial, sans-serif;
+    color: #fff
+}
+
+.nx-wa {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1030;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25)
+}
+
+.nx-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 4.5rem;
+    z-index: 1030;
+    min-width: 44px;
+    background: var(--nx-navy);
+    color: #ffffff
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+}
