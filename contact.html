@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devis et contact | NexaWeb Mali — Développeur web à Bamako</title>
+    <meta name="description"
+        content="Demandez un devis à NexaWeb Mali pour votre site web, boutique en ligne ou application. Réponse par formulaire, e-mail ou WhatsApp depuis Bamako.">
+    <link rel="canonical" href="https://nexawebmali.com/contact.html">
+    <meta property="og:title" content="Devis et contact | NexaWeb Mali — Développeur web à Bamako">
+    <meta property="og:description"
+        content="Demandez un devis à NexaWeb Mali pour votre site web, boutique en ligne ou application. Réponse par formulaire, e-mail ou WhatsApp depuis Bamako.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nexawebmali.com/assets/img/og.png">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40' aria-hidden='true'%3E%3Crect x='.5' y='.5' width='39' height='39' rx='9' fill='%2316213C' stroke='%23fff' stroke-opacity='.3'/%3E%3Cpath d='M11 30V10l18 20V10' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='11' cy='10' r='3' fill='%23C99A2E'/%3E%3Ccircle cx='29' cy='10' r='3' fill='%23C99A2E'/%3E%3Ccircle cx='11' cy='30' r='3' fill='%233E8E63'/%3E%3Ccircle cx='29' cy='30' r='3' fill='%233E8E63'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%233E8E63'/%3E%3C/svg%3E">
+    <!-- Dev : remplacer le CDN par les fichiers Bootstrap 5.3.x locaux (assets/css) et auto-héberger Lora + Inter (WOFF2) -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/nx.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenu">Aller au contenu</a>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top nx-navbar" data-bs-theme="dark">
+            <div class="container"><a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, accueil"><svg
+                        xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40'
+                        aria-hidden='true'>
+                        <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff'
+                            stroke-opacity='.3' />
+                        <path d='M11 30V10l18 20V10' fill='none' stroke='#fff' stroke-width='3.5'
+                            stroke-linejoin='round' stroke-linecap='round' />
+                        <circle cx='11' cy='10' r='3' fill='#C99A2E' />
+                        <circle cx='29' cy='10' r='3' fill='#C99A2E' />
+                        <circle cx='11' cy='30' r='3' fill='#3E8E63' />
+                        <circle cx='29' cy='30' r='3' fill='#3E8E63' />
+                        <circle cx='20' cy='20' r='3' fill='#3E8E63' />
+                    </svg><span class="nx-word">NexaWeb<small>MALI</small></span></a>
+                <a class="btn btn-nx ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" href="contact.html">Devis</a>
+                <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"
+                    aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="offcanvas offcanvas-end" id="menu" tabindex="-1" aria-labelledby="menuT">
+                    <div class="offcanvas-header"><span class="offcanvas-title h5" id="menuT">Menu</span><button
+                            class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button></div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-lg-auto gap-lg-3">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html"
+                                    aria-current="page">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="contenu">
+        <section class="nx-dark  py-5">
+            <div class="container py-lg-4">
+                <div class="col-lg-8">
+                    <h1>Parlons de votre projet</h1>
+                    <p class="lead nx-muted mt-3 mb-0">Décrivez votre besoin en quelques lignes. Plus vous êtes précis,
+                        plus notre devis le sera. Vous pouvez aussi nous écrire directement sur WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <form class="needs-validation row g-3" novalidate>
+                            <div class="col-md-6">
+                                <label class="form-label" for="nom">Nom complet *</label>
+                                <input class="form-control" id="nom" name="nom" type="text" required
+                                    autocomplete="name">
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Indiquez votre prénom et nom.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="email">Adresse e-mail *</label>
+                                <input class="form-control" id="email" name="email" type="email" required
+                                    autocomplete="email">
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Indiquez une adresse e-mail valide, par exemple : nom@exemple.com.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="tel">Téléphone ou WhatsApp *</label>
+                                <input class="form-control" id="tel" name="tel" type="tel" required autocomplete="tel"
+                                    inputmode="tel">
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Indiquez un numéro valide, avec l’indicatif du pays.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="entreprise">Entreprise ou organisation</label>
+                                <input class="form-control" id="entreprise" name="entreprise" type="text"
+                                    autocomplete="organization">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="type">Type de projet *</label>
+                                <select class="form-select" id="type" name="type" required>
+                                    <option value="default">Choisir…</option>
+                                    <option value="vitrine">Site vitrine</option>
+                                    <option value="ecommerce">Boutique en ligne (e-commerce)</option>
+                                    <option value="react">Application ou interface React</option>
+                                    <option value="maintenance">Maintenance ou dépannage</option>
+                                    <option value="freelance">Sous-traitance pour une agence</option>
+                                    <option value="other">Autre / je ne sais pas encore</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Choisissez un type de projet.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="budget">Budget indicatif (FCFA)</label>
+                                <select class="form-select" id="budget" name="budget" required>
+                                    <option value="default">Choisir…</option>
+                                    <option value="-125000">Moins de 125 000</option>
+                                    <option value="125000 - 300000">125 000 à 300 000</option>
+                                    <option value="3000000 - 600000">300 000 à 600 000</option>
+                                    <option value="600000 - 850000">600 000 à 850 000</option>
+                                    <option value="+850000">Plus de 850 000</option>
+                                    <option value="other">Je ne sais pas encore</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Choisissez un budget indicatif.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="delai">Délai souhaité</label>
+                                <select class="form-select" id="delai" name="delai" required>
+                                    <option value="default">Choisir…</option>
+                                    <option value="when possible">Dès que possible</option>
+                                    <option value="1 month">Sous 1 mois</option>
+                                    <option value="3 month">Sous 3 mois</option>
+                                    <option value="when okay">Pas de contrainte</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Choisissez un délai souhaité.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="message">Votre message *</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                                <div class="invalid-feedback">
+                                    <span aria-hidden="true"> ⚠ </span>
+                                    Décrivez brièvement votre projet.
+                                </div>
+                            </div>
+                            <div class="d-none" aria-hidden="true">
+                                <input name="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ok-rgpd" required>
+                                    <label class="form-check-label" for="ok-rgpd">J’accepte que mes
+                                        informations soient utilisées pour répondre à ma demande.
+                                        (<a href="confidentialite.html">Voir la politique de confidentialité</a>).
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        <span aria-hidden="true"> ⚠ </span>
+                                        Cochez cette case pour envoyer votre demande.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-nx" type="submit">Envoyer ma demande</button>
+                            </div>
+                        </form>
+                        <div class="toast-container position-fixed bottom-0 start-0 p-3">
+                            <div id="ok" class="toast" role="status" aria-live="polite" aria-atomic="true">
+                                <div class="toast-body">Votre demande est prête. Choisissez comment nous l’envoyer pour
+                                    qu’elle nous parvienne.</div>
+                                <a class="btn btn-nx btn-m" href="contact.html">Demander un devis</a>
+                                <a class="btn btn-outline-dark btn-m"
+                                    href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
+                                    target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="nx-card p-4">
+                            <h2 class="h4">Nos coordonnées</h2>
+                            <address>
+                                <a href="mailto:contact@nexawebmali.com">contact@nexawebmali.com</a><br>
+                                <a href="tel:+22382890992">+223 82 89 09 92</a><br>
+                                Bamako, Mali (GMT)
+                            </address>
+                            <p>Délai de réponse annoncé : Sous 12 heures.</p>
+                            <a class="btn btn-nx"
+                                href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
+                                target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="nx-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-6 col-lg-4">
+                    <a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, accueil">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40'
+                            aria-hidden='true'>
+                            <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff'
+                                stroke-opacity='.3' />
+                            <path d='M11 30V10l18 20V10' fill='none' stroke='#fff' stroke-width='3.5'
+                                stroke-linejoin='round' stroke-linecap='round' />
+                            <circle cx='11' cy='10' r='3' fill='#C99A2E' />
+                            <circle cx='29' cy='10' r='3' fill='#C99A2E' />
+                            <circle cx='11' cy='30' r='3' fill='#3E8E63' />
+                            <circle cx='29' cy='30' r='3' fill='#3E8E63' />
+                            <circle cx='20' cy='20' r='3' fill='#3E8E63' />
+                        </svg>
+                        <span class="nx-word">NexaWeb<small>MALI</small></span>
+                    </a>
+                    <p class="mt-3">Le digital malien, pensé pour le monde.</p>
+                    <p class="mt-3">Développement web depuis Bamako : sites WordPress, applications React et
+                        maintenance.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h2>Navigation</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h2>Services</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html#build">BUILD</a></li>
+                        <li><a href="services.html#advanced">ADVANCED</a></li>
+                        <li><a href="services.html#run">RUN</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h2>Contact</h2>
+                    <address class="mb-0">Bamako, Mali<br><a
+                            href="mailto:contact@nexawebmali.com">contact@nexawebmali.com</a><br><a
+                            href="tel:+22382890992">+223 82 89 09 92</a><br><a
+                            href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
+                            target="_blank" rel="noopener noreferrer">WhatsApp</a></address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="small mb-0">© <span id="an">2026</span> NexaWeb Mali. <a href="mentions-legales.html">Mentions
+                    légales</a> et <a href="confidentialite.html">confidentialité</a>.</p>
+        </div>
+    </footer>
+    <a class="btn btn-nx nx-wa"
+        href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis." target="_blank"
+        rel="noopener noreferrer">WhatsApp</a>
+    <button class="btn nx-top" id="top" aria-label="Retour en haut" hidden>↑</button>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
