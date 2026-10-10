@@ -60,7 +60,6 @@ nexawebmali/
 │   └── afrique-artisanat.html
 ├── 404.html
 ├── a-propos.html
-├── CNAME
 ├── confidentialite.html
 ├── contact.html
 ├── index.html
