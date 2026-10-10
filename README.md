@@ -45,24 +45,31 @@ NexaWeb Mali conçoit des sites, des applications et des solutions digitales mod
 
 ```
 nexawebmali/
-├── index.html
-├── services.html
-├── realisations.html
-├── realisations/
-│   └── etude-de-cas.html
-├── a-propos.html
-├── contact.html
-├── mentions-legales.html
-├── confidentialite.html
-├── 404.html
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   └── bootstrap.min.css
+│   │   └── nx.css
+│   └── images/
+│   │   └── AboubacrineBah1-1.jpg
+│   │   └── Capture d'ecran page d'acceuil.jpeg
+│   │   └── NexaWeb Mali acceuil.jpeg
+│   │   └── NexaWeb Mali.png
+│   │   └── Page d'acceuil section hero.jpeg
 │   ├── js/
+│   │   └── bootstrap.bundle.min.js
 │   │   └── main.js
-│   └── img/
-└── README.md
-```
+├── realisations/
+│   └── afrique-artisanat.html
+├── 404.html
+├── a-propos.html
+├── confidentialite.html
+├── contact.html
+├── index.html
+├── LICENCE.md
+├── mentions-legales.html
+├── README.md
+├── realisations.html   
+└── services.html```
 
 ## Démarrer en local
 
