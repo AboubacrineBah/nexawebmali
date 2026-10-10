@@ -64,6 +64,7 @@ nexawebmali/
 ├── confidentialite.html
 ├── contact.html
 ├── index.html
+├── LICENCE.md
 ├── mentions-legales.html
 ├── README.md
 ├── realisations.html   
