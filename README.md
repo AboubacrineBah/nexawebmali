@@ -7,7 +7,7 @@
 
 > **Le digital malien, pensé pour le monde.**
 
-🌐 **Site en ligne :** [https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/](https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/)
+🌐 **Site en ligne :** [https://aboubacrinebah.github.io/nexawebmali/]
 
 Site vitrine et portfolio de **NexaWeb Mali**, activité de développement web basée à Bamako (Mali). Ce dépôt contient l'interface utilisateur (front-end) du site, construite avec **Bootstrap 5**.
 
