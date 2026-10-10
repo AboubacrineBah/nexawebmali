@@ -70,17 +70,6 @@ nexawebmali/
 └── services.html
 ```
 
-## Démarrer en local
-
-1. Clone le dépôt :
-   ```bash
-   git clone https://github.com/AboubacrineBah/nexawebmali.git
-   ```
-2. Ouvre le dossier `nexawebmali` dans ton éditeur (par exemple Visual Studio Code).
-3. Ouvre `index.html` dans ton navigateur, ou lance-le avec l'extension **Live Server** pour un rechargement automatique.
-
-Aucune installation ni compilation n'est nécessaire.
-
 ## Déploiement
 
 Le site est publié gratuitement avec **GitHub Pages**, à partir de la branche principale du dépôt (dossier racine). Chaque fois qu'une modification est envoyée sur GitHub (commit puis push), le site se met à jour automatiquement en une à deux minutes.
