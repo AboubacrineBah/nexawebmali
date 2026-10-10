@@ -7,6 +7,8 @@
 
 > **Le digital malien, pensé pour le monde.**
 
+🌐 **Site en ligne :** [https://aboubacrinebah.github.io/nexawebmali/]
+
 Site vitrine et portfolio de **NexaWeb Mali**, activité de développement web basée à Bamako (Mali). Ce dépôt contient l'interface utilisateur (front-end) du site, construite avec **Bootstrap 5**.
 
 ---
@@ -65,19 +67,24 @@ nexawebmali/
 ├── mentions-legales.html
 ├── README.md
 ├── realisations.html   
-└── services.html
-```
+└── services.html```
 
 ## Démarrer en local
 
 1. Clone le dépôt :
    ```bash
-   git clone https://github.com/AboubacrineBah/nexawebmali.git
+   git clone https://github.com/VOTRE-NOM-UTILISATEUR/nexawebmali.git
    ```
 2. Ouvre le dossier `nexawebmali` dans ton éditeur (par exemple Visual Studio Code).
 3. Ouvre `index.html` dans ton navigateur, ou lance-le avec l'extension **Live Server** pour un rechargement automatique.
 
 Aucune installation ni compilation n'est nécessaire.
+
+## Déploiement
+
+Le site est publié gratuitement avec **GitHub Pages**, à partir de la branche principale du dépôt (dossier racine). Chaque fois qu'une modification est envoyée sur GitHub (commit puis push), le site se met à jour automatiquement en une à deux minutes.
+
+Comme le site est servi depuis le sous-dossier `/nexawebmali/`, les liens vers les fichiers (CSS, JavaScript, images, autres pages) doivent être des **chemins relatifs** (`assets/css/style.css`) et non des chemins commençant par une barre oblique (`/assets/css/style.css`).
 
 ## Identité visuelle
 
@@ -105,7 +112,8 @@ Le site suit la charte de marque NexaWeb Mali.
 - [x] Page d'accueil Bootstrap 5
 - [x] Modèles des pages principales
 - [x] Contenus définitifs et visuels des réalisations
-- [ ] Mise en ligne et nom de domaine
+- [x] Mise en ligne sur GitHub Pages
+- [ ] Nom de domaine personnalisé (nexawebmali.com)
 - [ ] Blog (V1.1, optionnel)
 - [ ] Version anglaise `/en/` (V1.1)
 - [ ] Intégration PHP / MySQL pour le formulaire de devis (étape ultérieure)
@@ -114,9 +122,10 @@ Le site suit la charte de marque NexaWeb Mali.
 
 - **NexaWeb Mali** : Bamako, Mali
 - Fondateur : BAH Aboubacrine
+- Site web : [https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/](https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/)
 - E-mail : *bahaboubacrine1@gmail.com*
 - WhatsApp : *0022382890992*
 
 ## Licence
 
-© 2026 NexaWeb Mali. Tous droits réservés.
+© 2026 NexaWeb Mali. Tous droits réservés. Voir le fichier [LICENSE](LICENSE.md) pour les conditions d'utilisation (version française et anglaise).
