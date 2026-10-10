@@ -56,6 +56,8 @@ nexawebmali/
 │   ├── js/
 │   │   └── bootstrap.bundle.min.js
 │   │   └── main.js
+├── realisations/
+│   └── afrique-artisanat.html
 ├── 404.html
 ├── a-propos.html
 ├── CNAME
@@ -64,9 +66,7 @@ nexawebmali/
 ├── index.html
 ├── mentions-legales.html
 ├── README.md
-├── realisations.html
-├── realisations/
-│   └── etude-de-cas.html   
+├── realisations.html   
 └── services.html
 ```
 
@@ -74,7 +74,7 @@ nexawebmali/
 
 1. Clone le dépôt :
    ```bash
-   git clone https://github.com/VOTRE-NOM-UTILISATEUR/nexawebmali.git
+   git clone https://github.com/AboubacrineBah/nexawebmali.git
    ```
 2. Ouvre le dossier `nexawebmali` dans ton éditeur (par exemple Visual Studio Code).
 3. Ouvre `index.html` dans ton navigateur, ou lance-le avec l'extension **Live Server** pour un rechargement automatique.
