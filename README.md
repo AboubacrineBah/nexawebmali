@@ -7,7 +7,7 @@
 
 > **Le digital malien, pensé pour le monde.**
 
-🌐 **Site en ligne :** [https://aboubacrinebah.github.io/nexawebmali/]
+🌐 **Site en ligne :** https://aboubacrinebah.github.io/nexawebmali/
 
 Site vitrine et portfolio de **NexaWeb Mali**, activité de développement web basée à Bamako (Mali). Ce dépôt contient l'interface utilisateur (front-end) du site, construite avec **Bootstrap 5**.
 
@@ -67,13 +67,14 @@ nexawebmali/
 ├── mentions-legales.html
 ├── README.md
 ├── realisations.html   
-└── services.html```
+└── services.html
+```
 
 ## Démarrer en local
 
 1. Clone le dépôt :
    ```bash
-   git clone https://github.com/VOTRE-NOM-UTILISATEUR/nexawebmali.git
+   git clone https://github.com/AboubacrineBah/nexawebmali.git
    ```
 2. Ouvre le dossier `nexawebmali` dans ton éditeur (par exemple Visual Studio Code).
 3. Ouvre `index.html` dans ton navigateur, ou lance-le avec l'extension **Live Server** pour un rechargement automatique.
@@ -121,8 +122,8 @@ Le site suit la charte de marque NexaWeb Mali.
 ## Contact
 
 - **NexaWeb Mali** : Bamako, Mali
-- Fondateur : BAH Aboubacrine
-- Site web : [https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/](https://VOTRE-NOM-UTILISATEUR.github.io/nexawebmali/)
+- Fondateur : M. BAH Aboubacrine
+- Site web : https://aboubacrinebah.github.io/nexawebmali/
 - E-mail : *bahaboubacrine1@gmail.com*
 - WhatsApp : *0022382890992*
 
