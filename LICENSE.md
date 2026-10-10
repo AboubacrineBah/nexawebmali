@@ -42,7 +42,7 @@ Le Contenu est fourni « en l'état », sans garantie d'aucune sorte. Dans la me
 
 ### 7. Demande d'autorisation
 
-Pour toute demande d'autorisation, contacter : [adresse e-mail à compléter].
+Pour toute demande d'autorisation, contacter : bahaboubacrine1@gmail.com.
 
 ---
 
@@ -81,4 +81,4 @@ The Content is provided "as is", without warranty of any kind. To the extent per
 
 ### 7. Permission requests
 
-For any permission request, please contact: [e-mail address to be completed].
+For any permission request, please contact: bahaboubacrine1@gmail.com.
