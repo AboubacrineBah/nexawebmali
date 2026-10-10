@@ -39,8 +39,6 @@ NexaWeb Mali conçoit des sites, des applications et des solutions digitales mod
 
 ## Structure du projet
 
-> À adapter si ton arborescence est différente.
-
 ```
 nexawebmali/
 ├── assets/
