@@ -49,8 +49,17 @@ nexawebmali/
 │   │   └── nx.css
 │   └── images/
 │   │   └── AboubacrineBah1-1.jpg
+│   │   └── Capture d'ecran page a propos.jpeg
+│   │   └── Capture d'ecran page contact.jpeg
 │   │   └── Capture d'ecran page d'acceuil.jpeg
+│   │   └── Capture d'ecran page portfolio.jpeg
+│   │   └── Capture d'ecran page realisations.jpeg
+│   │   └── Capture d'ecran page services.jpeg
 │   │   └── NexaWeb Mali acceuil.jpeg
+│   │   └── NexaWeb Mali apropos.jpeg
+│   │   └── NexaWeb Mali contact.jpeg
+│   │   └── NexaWeb Mali realisations.jpeg
+│   │   └── NexaWeb Mali services.jpeg
 │   │   └── NexaWeb Mali.png
 │   │   └── Page d'acceuil section hero.jpeg
 │   ├── js/
@@ -58,6 +67,8 @@ nexawebmali/
 │   │   └── main.js
 ├── realisations/
 │   └── afrique-artisanat.html
+│   └── nexaweb-mali-bt.html
+│   └── nexaweb-mali.html
 ├── 404.html
 ├── a-propos.html
 ├── confidentialite.html
