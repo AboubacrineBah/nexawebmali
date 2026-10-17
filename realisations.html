@@ -19,7 +19,8 @@
         stroke-linecap='round'/%3E%3Ccircle cx='11' cy='10' r='3' fill='%23C99A2E'/%3E%3Ccircle cx='29' cy='10' r='3' fill='%23C99A2E'/%3E%3Ccircle cx='11' cy='30' r='3' fill='%233E8E63'/%3E%3Ccircle 
         cx='29' cy='30' r='3' fill='%233E8E63'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%233E8E63'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nx.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/nx.css">
     <script type="application/ld+json">
         {
             "@context":"https://schema.org",
@@ -38,7 +39,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top nx-navbar" data-bs-theme="dark">
             <div class="container">
-                <a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, accueil">
+                <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali, accueil">
                     <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40'
                         aria-hidden='true'>
                         <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff'
@@ -53,7 +54,7 @@
                     </svg>
                     <span class="nx-word">NexaWeb<small>MALI</small></span>
                 </a>
-                <a class="btn btn-nx ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" href="contact.html">Devis</a>
+                <a class="btn btn-nx ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" href="../contact.html">Devis</a>
                 <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"
                     aria-label="Ouvrir le menu">
                     <span class="navbar-toggler-icon"></span>
@@ -65,10 +66,10 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav ms-lg-auto gap-lg-3">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="realisations.html"
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../a-propos.html">À propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="../realisations.html"
                                     aria-current="page">Réalisations</a></li>
                         </ul>
                     </div>
@@ -83,8 +84,13 @@
                     <h1>Nos réalisations</h1>
                     <p class="h3 mt-3 mb-0">Des projets concrets, de la maquette à la mise en ligne.</p>
                     <p class="lead nx-muted mt-3 mb-0">Chaque projet présente le contexte, la solution retenue et les
-                        technologies utilisées. Les projets marqués « Démonstration » ont été conçus par NexaWeb Mali
-                        pour illustrer notre méthode ; ce ne sont pas des commandes clients.</p>
+                        technologies utilisées.<br>
+                        Les projets marqués « Démonstration » ont été conçus par NexaWeb Mali
+                        pour illustrer notre méthode ; ce ne sont pas des commandes clients.<br>
+                        Les projets marqués « En production » sont en phase de developpement par NexaWeb Mali pour
+                        illustrer notre méthode ;
+                        ce ne sont pas des commandes clients.
+                    </p>
                 </div>
             </div>
         </section>
@@ -105,11 +111,9 @@
                         <article class="nx-card h-100 overflow-hidden">
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
                                 aria-label="Aperçu du projet NexaWeb MALI">
-                                <span>
-                                    <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
-                                        aria-label="Capture du projet NexaWeb MALI WordPress"
-                                        src="assets/images/NexaWeb Mali.png" alt="site wordpress">
-                                </span>
+                                <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                    aria-label="Capture du projet NexaWeb MALI WordPress"
+                                    src="../assets/images/NexaWeb Mali.png" alt="site wordpress">
                             </div>
                             <div class="p-4">
                                 <span class="badge text-bg-warning mb-2">Projet de démonstration</span>
@@ -120,7 +124,7 @@
                                     <span class="badge text-bg-light border me-1">WordPress</span>
                                     <span class="badge text-bg-light border me-1">PHP</span>
                                 </p>
-                                <a href="realisations/nexaweb-mali.html">Lire l’étude de cas</a>
+                                <a href="../realisations/nexaweb-mali.html">Lire l’étude de cas</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
                                     data-bs-target="#sitewordpress">Aperçu</button>
                             </div>
@@ -130,13 +134,12 @@
                         <article class="nx-card h-100 overflow-hidden">
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
                                 aria-label="Aperçu du projet Nexaweb MALI Bootstrap">
-                                <span>
-                                    <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
-                                        aria-label="Capture du projet NexaWeb MALI Bootstrap"
-                                        src="assets/images/Page d'acceuil section hero.jpeg" alt="site bootstrap">
-                                </span>
+                                <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                    aria-label="Capture du projet NexaWeb MALI Bootstrap"
+                                    src="../assets/images/Page d'acceuil section hero.jpeg" alt="site bootstrap">
                             </div>
-                            <div class="p-4"><span class="badge text-bg-warning mb-2">Projet de démonstration</span>
+                            <div class="p-4">
+                                <span class="badge text-bg-warning mb-2">Projet de démonstration</span>
                                 <h3>NexaWeb MALI</h3>
                                 <p>Site vitrine avec menu et demande de devis pour événements.</p>
                                 <p>
@@ -145,7 +148,7 @@
                                     <span class="badge text-bg-light border me-1">JavaScript</span>
                                     <span class="badge text-bg-light border me-1">Bootstrap</span>
                                 </p>
-                                <a href="realisations/nexaweb-mali-bt.html">Lire l’étude de cas</a>
+                                <a href="../realisations/nexaweb-mali-bt.html">Lire l’étude de cas</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
                                     data-bs-target="#sitebootstrap">Aperçu</button>
                             </div>
@@ -155,10 +158,13 @@
                         <article class="nx-card h-100 overflow-hidden">
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
                                 aria-label="Aperçu du projet Boutique d’artisanat">
-                                <span>Aperçu 16:10</span>
+                                <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                    aria-label="Capture du projet Boutique d’artisanat"
+                                    src="../assets/images/En production.jpg" alt="site ecommerce">
                             </div>
-                            <div class="p-4">
+                            <div class=" p-4">
                                 <span class="badge text-bg-warning mb-2">Projet de démonstration</span>
+                                <span class="badge text-bg-warning mb-2">Projet en production</span>
                                 <h3>Boutique d’artisanat</h3>
                                 <p>Boutique en ligne pour un atelier de cuir et de tissus.</p>
                                 <p>
@@ -166,7 +172,7 @@
                                     <span class="badge text-bg-light border me-1">WooCommerce</span>
                                     <span class="badge text-bg-light border me-1">Laravel</span>
                                 </p>
-                                <a href="realisations/afrique-artisanat.html">Lire l’étude de cas</a>
+                                <a href="../realisations/afrique-artisanat.html">Lire l’étude de cas</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
                                     data-bs-target="#siteecommerce">Aperçu</button>
                             </div>
@@ -176,17 +182,20 @@
                         <article class="nx-card h-100 overflow-hidden">
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
                                 aria-label="Aperçu du projet Association Jigi">
-                                <span>Aperçu 16:10</span>
+                                <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                    aria-label="Capture du projet Association Jigi"
+                                    src="../assets/images/En production.jpg" alt="app react">
                             </div>
                             <div class="p-4">
                                 <span class="badge text-bg-warning mb-2">Projet de démonstration</span>
+                                <span class="badge text-bg-warning mb-2">Projet en production</span>
                                 <h3>Association Jigi</h3>
                                 <p>Application monopage de suivi des dons.</p>
                                 <p>
                                     <span class="badge text-bg-light border me-1">React</span>
                                     <span class="badge text-bg-light border me-1">API</span>
                                 </p>
-                                <a href="realisations/afrique-artisanat.html">Lire l’étude de cas</a>
+                                <a href="../realisations/afrique-artisanat.html">Lire l’étude de cas</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
                                     data-bs-target="#appreact">Aperçu</button>
                             </div>
@@ -200,7 +209,7 @@
                 <h2>Votre projet peut être le prochain.</h2>
                 <p class="nx-muted">Parlez-nous de votre activité : nous vous proposons la solution la plus adaptée.</p>
                 <div class="d-grid d-sm-flex gap-2 justify-content-center">
-                    <a class="btn btn-nx btn-lg" href="contact.html">Demander un devis</a>
+                    <a class="btn btn-nx btn-lg" href="../contact.html">Demander un devis</a>
                     <a class="btn btn-outline-light btn-lg"
                         href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
                         target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
@@ -217,12 +226,10 @@
                     <div class="modal-body">
                         <div style="--bs-aspect-ratio:62.5%" role="img"
                             aria-label="Capture agrandie du projet NexaWeb MALI WordPress" alt="site wordpress">
-                            <span>
-                                <img class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
-                                    aria-label="Capture agrandie du projet NexaWeb MALI WordPress"
-                                    src="assets/images/Capture d’écran page d'accueil.jpeg" alt="site wordpress"
-                                    data-bs-toggle="modal" data-bs-target="#sitewordpress">
-                            </span>
+                            <img class="ratio nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                aria-label="Capture agrandie du projet NexaWeb MALI WordPress"
+                                src="../assets/images/Capture d’écran page d'accueil.jpeg" alt="site wordpress"
+                                data-bs-toggle="modal" data-bs-target="#sitewordpress">
                         </div>
                     </div>
                 </div>
@@ -238,12 +245,10 @@
                     <div class="modal-body">
                         <div style="--bs-aspect-ratio:62.5%" role="img"
                             aria-label="Capture agrandie du projet NexaWeb MALI Bootstrap" alt="site bootstrap">
-                            <span>
-                                <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
-                                    aria-label="Capture agrandie du projet NexaWeb MALI Bootstrap"
-                                    src="assets/images/Nexaweb mali accueil.jpeg" alt="site bootstrap"
-                                    data-bs-toggle="modal" data-bs-target="#sitebootstrap">
-                            </span>
+                            <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                aria-label="Capture agrandie du projet NexaWeb MALI Bootstrap"
+                                src="../assets/images/Nexaweb mali accueil.jpeg" alt="site bootstrap"
+                                data-bs-toggle="modal" data-bs-target="#sitebootstrap">
                         </div>
                     </div>
                 </div>
@@ -259,9 +264,10 @@
                     <div class="modal-body">
                         <div style="--bs-aspect-ratio:62.5%" role="img"
                             aria-label="Capture agrandie du projet Boutique d'artisanat" alt="site ecommerce">
-                            <span>
-                                Capture agrandie.
-                            </span>
+                            <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                aria-label="Capture agrandie du projet Boutique d'artisanat"
+                                src="../assets/images/En production.jpg" alt="site ecommerce" data-bs-toggle="modal"
+                                data-bs-target="#siteecommerce">
                         </div>
                     </div>
                 </div>
@@ -277,9 +283,10 @@
                     <div class="modal-body">
                         <div style="--bs-aspect-ratio:62.5%" role="img"
                             aria-label="Capture agrandie du projet Association Jigi" alt="App React">
-                            <span>
-                                Capture agrandie.
-                            </span>
+                            <img class="ratio ratio-16x9 nx-shot" style="--bs-aspect-ratio:62.5%" role="img"
+                                aria-label="Capture agrandie du projet Association Jigi"
+                                src="../assets/images/En production.jpg" alt="app react" data-bs-toggle="modal"
+                                data-bs-target="#appreact">
                         </div>
                     </div>
                 </div>
@@ -290,7 +297,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-md-6 col-lg-4">
-                    <a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, accueil">
+                    <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali, accueil">
                         <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40'
                             aria-hidden='true'>
                             <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff'
@@ -312,19 +319,19 @@
                 <div class="col-6 col-lg-2">
                     <h2>Navigation</h2>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../a-propos.html">À propos</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../realisations.html">Réalisations</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-3">
                     <h2>Services</h2>
                     <ul class="list-unstyled">
-                        <li><a href="services.html#build">BUILD</a></li>
-                        <li><a href="services.html#advanced">ADVANCED</a></li>
-                        <li><a href="services.html#run">RUN</a></li>
+                        <li><a href="../services.html#build">BUILD</a></li>
+                        <li><a href="../services.html#advanced">ADVANCED</a></li>
+                        <li><a href="../services.html#run">RUN</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -339,8 +346,8 @@
             </div>
             <hr class="my-4">
             <p class="small mb-0"> © <span id="an">2026</span> NexaWeb Mali.
-                <a href="mentions-legales.html">Mentions légales</a> et
-                <a href="confidentialite.html">confidentialité</a>.
+                <a href="../mentions-legales.html">Mentions légales</a> et
+                <a href="../confidentialite.html">confidentialité</a>.
             </p>
         </div>
     </footer>
@@ -349,7 +356,8 @@
         rel="noopener noreferrer">WhatsApp</a>
     <button class="btn nx-top" id="top" aria-label="Retour en haut" hidden>↑</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
 </body>
 
 </html>
