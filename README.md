@@ -45,9 +45,32 @@ NexaWeb Mali conçoit des sites, des applications et des solutions digitales mod
 nexawebmali/
 ├── assets/
 │   ├── css/
-│   │   └── bootstrap.min.css
 │   │   └── nx.css
 │   └── images/
+│   │   └── admin/
+│   │   │   └── artisans.png
+│   │   │   └── categories.png
+│   │   │   └── clients.png
+│   │   │   └── commandes.png
+│   │   │   └── creation-artisan.png
+│   │   │   └── creation-categorie.png
+│   │   │   └── creation-produit.png
+│   │   │   └── messages.png
+│   │   │   └── produits.png
+│   │   │   └── tableau-de-bord.png
+│   │   └── client/
+│   │   │   └── adresses.png
+│   │   │   └── commande.png
+│   │   │   └── commandes.png
+│   │   │   └── profil.png
+│   │   └── public/
+│   │   │   └── accueil.png
+│   │   │   └── artisans.png
+│   │   │   └── connexion.png
+│   │   │   └── contact.png
+│   │   │   └── inscription.png
+│   │   │   └── panier.png
+│   │   │   └── produits.png
 │   │   └── AboubacrineBah1-1.jpg
 │   │   └── Capture d'ecran page a propos.jpeg
 │   │   └── Capture d'ecran page contact.jpeg
@@ -63,7 +86,6 @@ nexawebmali/
 │   │   └── NexaWeb Mali.png
 │   │   └── Page d'acceuil section hero.jpeg
 │   ├── js/
-│   │   └── bootstrap.bundle.min.js
 │   │   └── main.js
 ├── realisations/
 │   └── afrique-artisanat.html
