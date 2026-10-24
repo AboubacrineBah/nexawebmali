@@ -71,8 +71,8 @@
                     <h1>Afrique Artisanat</h1>
                     <p class="lead nx-muted mt-3 mb-0">Projet de démonstration</p>
                     <p class="lead nx-muted mt-3 mb-0">Boutique e-commerce pour l’artisanat malien</p>
-                    <p>Une boutique digitale pensée pour valoriser les savoir-faire locaux et convertir les visiteurs en
-                        commandes.</p>
+                    <p>Une boutique en ligne complète (site, espace client et back-office) développée avec Laravel, pour
+                        valoriser les savoir-faire locaux et simplifier la prise de commande.</p>
                 </div>
             </div>
         </section>
@@ -82,38 +82,74 @@
                 <div class="col-lg-9">
                     <dl class="row nx-card p-3 mb-4">
                         <dt class="col-5 col-md-3">Client :</dt>
-                        <dd class="col-7 col-md-3">Afrique Artisanat.</dd>
+                        <dd class="col-7 col-md-3">Afrique Artisanat (fictif).</dd>
                         <dt class="col-5 col-md-3">Secteur d'activité :</dt>
-                        <dd class="col-7 col-md-3">Artisanat et commerce local.</dd>
+                        <dd class="col-7 col-md-3">Artisanat et commerce</dd>
                         <dt class="col-5 col-md-3">Année :</dt>
                         <dd class="col-7 col-md-3">2026.</dd>
                         <dt class="col-5 col-md-3">Durée :</dt>
                         <dd class="col-7 col-md-3">2 mois.</dd>
                         <dt class="col-5 col-md-3">Rôles :</dt>
-                        <dd class="col-7 col-md-3 mb-0">Design UX, développement front-end, conversion.</dd>
+                        <dd class="col-7 col-md-3 mb-0">Conception UX/UI, développement back-end et front-end, tests,
+                            documentation.</dd>
                         <dt class="col-5 col-md-3">Technologies :</dt>
-                        <dd class="col-7 col-md-3 mb-0">WordPress, WooCommerce, Bootstrap, Laravel.</dd>
+                        <dd class="col-7 col-md-3 mb-0">Laravel, PHP, MySQL, Bootstrap 5, Vite, PHPUnit.</dd>
                     </dl>
 
                     <h2 class="h3 mt-4">Contexte</h2>
-                    <p>L’activité devait vendre des produits artisanaux en ligne tout en laissant une place forte à
-                        l’histoire et au savoir-faire. Le défi principal était de rendre la boutique élégante, lisible
-                        et performante sur mobile, car la majorité des visiteurs venait depuis un smartphone.</p>
+                    <p>Beaucoup d’artisans maliens et ouest-africains (textiles, bijoux, sculptures, maroquinerie,
+                        poterie) vendent surtout sur les marchés et en boutique, et leur visibilité en ligne reste
+                        limitée. Afrique Artisanat est une boutique fictive qui répond à ce besoin : présenter les
+                        créations, rattacher chaque produit à son artisan et prendre des commandes en ligne.
+
+                        C’est aussi un projet de démonstration NexaWeb Mali : une application Laravel complète,
+                        documentée et testée, qui s’installe en local avec XAMPP.</p>
 
                     <h2 class="h3 mt-4">Défis</h2>
-                    <p>Créer un commerce en ligne simple à utiliser, avec un parcours de commande fluide, des visuels
-                        produits de qualité et une navigation claire pour une clientèle local et internationale.</p>
+                    <p><strong>Un parcours d’achat simple, d’abord pensé pour le mobile :</strong> des pages lisibles
+                        sur petit écran et une commande en peu d’écrans.</p>
+                    <hr>
+                    <p><strong>Des paiements adaptés au contexte local, sans transaction réelle :</strong> paiement à la
+                        livraison, Orange Money et Moov Money simulés, avec une logique prête pour de vrais services.
+                    </p>
+                    <hr>
+                    <p><strong>Des données de vente fiables :</strong> pas de vente au-delà du stock, prix et adresse
+                        conservés tels qu’à la commande, historique intact.</p>
+                    <hr>
+                    <p><strong>Une pile adaptée à l’environnement local :</strong> XAMPP (MariaDB, version de PHP),
+                        Bootstrap avec
+                        Laravel et styles compilés avec Vite et Sass.
+                    </p>
 
                     <h2 class="h3 mt-4">Solutions</h2>
-                    <p>Une boutique premium avec catalogue structuré, filtres rapides, CTA visibles, page produit claire
-                        et mise en page responsive adaptée aux appareils mobiles et ordinateurs.</p>
+                    <p><strong>Laravel (MVC) :</strong> 9 tables, 21 contrôleurs, validation par Form Requests et accès
+                        limité de chaque client à ses commandes.</p>
+                    <hr>
+                    <p><strong>Logique métier dans des services :</strong> panier en session, commande enregistrée dans
+                        une transaction (stock contrôlé puis décrémenté) et passerelles de paiement derrière une
+                        interface.</p>
+                    <hr>
+                    <p><strong>Cycle de vie des commandes :</strong> En attente, Confirmée, Expédiée, Livrée, avec
+                        annulation possible avant expédition et remise en stock.</p>
+                    <hr>
+                    <p><strong>Interface Bootstrap 5 :</strong> thème Sass aux couleurs du site, 48 vues Blade et
+                        composants de formulaire réutilisables.</p>
+                    <hr>
+                    <p><strong>Qualité et conception :</strong> 25 tests automatisés, intégration continue GitHub
+                        Actions, cahier des charges et 50 maquettes (25 pages en versions bureau et mobile).</p>
 
                     <h2 class="h3 mt-4">Résultats</h2>
                     <ul class="list-unstyled">
-                        <li class="py-2 border-bottom">Amélioration de la lisibilité des produits</li>
-                        <li class="py-2 border-bottom">Parcours de commande plus fluide</li>
-                        <li class="py-2">Meilleure confiance client grâce à une expérience plus premium et accessible
-                        </li>
+                        <li class="py-2 border-bottom">Un catalogue filtrable (catégorie, prix, matière, stock, tri), un
+                            panier et une commande en 3 écrans avec suivi</li>
+                        <li class="py-2 border-bottom">Un espace client (commandes, profil, adresses) et un back-office
+                            complet (produits, commandes, clients, messages)</li>
+                        <li class="py-2">18 produits, 6 catégories et 6 ateliers de démonstration, avec des comptes de
+                            test</li>
+                        <li class="py-2">25 tests automatisés et une documentation complète pour installer le projet en
+                            local</li>
+                        <li class="py-2">Temps de chargement, scores Lighthouse et recette : à mesurer après
+                            installation</li>
                     </ul>
 
                     <h2 class="h3 mt-4">Galerie</h2>
@@ -122,21 +158,21 @@
                             <div class="carousel-item active">
                                 <div class="ratio nx-shot rounded-4" style="--bs-aspect-ratio:62.5%">
                                     <img class="w-100 h-100 object-fit-contain"
-                                        src="../assets/images/Nexaweb mali accueil.jpeg"
+                                        src="../assets/images/public/accueil.png"
                                         alt="Accueil de la boutique Afrique Artisanat">
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="ratio nx-shot rounded-4" style="--bs-aspect-ratio:62.5%">
                                     <img class="w-100 h-100 object-fit-contain"
-                                        src="../assets/images/Nexaweb mali services.jpeg"
-                                        alt="Service et catalogue de la boutique Afrique Artisanat">
+                                        src="../assets/images/public/artisans.png"
+                                        alt="Artisans de la boutique Afrique Artisanat">
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="ratio nx-shot rounded-4" style="--bs-aspect-ratio:62.5%">
                                     <img class="w-100 h-100 object-fit-contain"
-                                        src="../assets/images/Nexaweb mali contact.jpeg"
+                                        src="../assets/images/public/"
                                         alt="Contact de la boutique Afrique Artisanat">
                                 </div>
                             </div>
