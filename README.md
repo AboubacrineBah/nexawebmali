@@ -22,7 +22,7 @@ NexaWeb Mali conçoit des sites, des applications et des solutions digitales mod
 ## Périmètre de ce dépôt
 
 - Interface utilisateur uniquement : **HTML5, CSS3, JavaScript et Bootstrap 5.3**
-- Pas de PHP ni de MySQL à ce stade (pas de traitement serveur : le formulaire de devis est une interface avec validation côté navigateur)
+- Pas de PHP ni de MySQL à ce stade (pas de traitement serveur : le formulaire de devis valide les champs dans le navigateur, puis prépare un récapitulatif à envoyer par WhatsApp)
 - Approche **mobile-first**, pensée pour des connexions mobiles de qualité variable
 
 ## Pages du site

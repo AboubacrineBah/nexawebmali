@@ -87,105 +87,119 @@
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-8">
-                        <form class="needs-validation row g-3" novalidate>
-                            <div class="col-md-6">
-                                <label class="form-label" for="nom">Nom complet *</label>
-                                <input class="form-control" id="nom" name="nom" type="text" required
-                                    autocomplete="name">
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Indiquez votre prénom et nom.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="email">Adresse e-mail *</label>
-                                <input class="form-control" id="email" name="email" type="email" required
-                                    autocomplete="email">
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Indiquez une adresse e-mail valide, par exemple : nom@exemple.com.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="tel">Téléphone ou WhatsApp *</label>
-                                <input class="form-control" id="tel" name="tel" type="tel" required autocomplete="tel"
-                                    inputmode="tel">
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Indiquez un numéro valide, avec l’indicatif du pays.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="entreprise">Entreprise ou organisation</label>
-                                <input class="form-control" id="entreprise" name="entreprise" type="text"
-                                    autocomplete="organization">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="type">Type de projet *</label>
-                                <select class="form-select" id="type" name="type" required>
-                                    <option value="default">Choisir…</option>
-                                    <option value="vitrine">Site vitrine</option>
-                                    <option value="ecommerce">Boutique en ligne (e-commerce)</option>
-                                    <option value="react">Application ou interface React</option>
-                                    <option value="maintenance">Maintenance ou dépannage</option>
-                                    <option value="freelance">Sous-traitance pour une agence</option>
-                                    <option value="other">Autre / je ne sais pas encore</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Choisissez un type de projet.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="delai">Délai souhaité</label>
-                                <select class="form-select" id="delai" name="delai" required>
-                                    <option value="default">Choisir…</option>
-                                    <option value="1 month">Sous 1 mois</option>
-                                    <option value="3 month">Sous 3 mois</option>
-                                    <option value="when okay">Pas de contrainte</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Choisissez un délai souhaité.
-                                </div>
-                            </div>
+                        <form class="needs-validation row g-3" id="devis-form" novalidate>
                             <div class="col-12">
-                                <label class="form-label" for="message">Votre message *</label>
-                                <textarea class="form-control" id="message" rows="4" required></textarea>
-                                <div class="invalid-feedback">
-                                    <span aria-hidden="true"> ⚠ </span>
-                                    Décrivez brièvement votre projet.
+                                <p class="mb-2" id="form-step-label" aria-live="polite">Étape 1 sur 3 : Votre projet</p>
+                                <div class="progress" role="progressbar" aria-label="Progression du formulaire"
+                                    aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+                                    <div class="progress-bar bg-success" id="form-progress" style="width: 33.33%"></div>
                                 </div>
                             </div>
-                            <div class="d-none" aria-hidden="true">
-                                <input name="website" tabindex="-1" autocomplete="off">
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="ok-rgpd" required>
-                                    <label class="form-check-label" for="ok-rgpd">J’accepte que mes
-                                        informations soient utilisées pour répondre à ma demande.
-                                        (<a href="confidentialite.html">Voir la politique de confidentialité</a>).
-                                    </label>
-                                    <div class="invalid-feedback">
-                                        <span aria-hidden="true"> ⚠ </span>
-                                        Cochez cette case pour envoyer votre demande.
+                            <fieldset class="col-12 border-0 p-0 m-0" data-form-step="1">
+                                <legend class="h4 mb-3">Votre projet</legend>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="type">Type de projet *</label>
+                                        <select class="form-select" id="type" name="type" required>
+                                            <option value="">Choisir…</option>
+                                            <option value="vitrine">Site vitrine</option>
+                                            <option value="ecommerce">Boutique en ligne (e-commerce)</option>
+                                            <option value="react">Application ou interface React</option>
+                                            <option value="maintenance">Maintenance ou dépannage</option>
+                                            <option value="freelance">Sous-traitance pour une agence</option>
+                                            <option value="other">Autre / je ne sais pas encore</option>
+                                        </select>
+                                        <div class="invalid-feedback">Choisissez un type de projet.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="delai">Délai souhaité *</label>
+                                        <select class="form-select" id="delai" name="delai" required>
+                                            <option value="">Choisir…</option>
+                                            <option value="1 month">Sous 1 mois</option>
+                                            <option value="3 month">Sous 3 mois</option>
+                                            <option value="when okay">Pas de contrainte</option>
+                                        </select>
+                                        <div class="invalid-feedback">Choisissez un délai souhaité.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="budget">Budget indicatif (facultatif)</label>
+                                        <input class="form-control" id="budget" name="budget" type="text"
+                                            placeholder="À discuter">
+                                        <div class="form-text">Laissez ce champ vide si vous préférez discuter du budget.</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-nx" type="submit">Envoyer ma demande</button>
-                            </div>
+                                <div class="d-flex justify-content-end mt-4">
+                                    <button class="btn btn-nx" type="button" data-form-next>Continuer</button>
+                                </div>
+                            </fieldset>
+                            <fieldset class="col-12 border-0 p-0 m-0" data-form-step="2" hidden>
+                                <legend class="h4 mb-3">Décrivez votre besoin</legend>
+                                <label class="form-label" for="message">Votre message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Décrivez brièvement votre projet.</div>
+                                <div class="d-flex justify-content-between gap-2 mt-4">
+                                    <button class="btn btn-outline-nx" type="button" data-form-back>Retour</button>
+                                    <button class="btn btn-nx" type="button" data-form-next>Continuer</button>
+                                </div>
+                            </fieldset>
+                            <fieldset class="col-12 border-0 p-0 m-0" data-form-step="3" hidden>
+                                <legend class="h4 mb-3">Vos coordonnées</legend>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="nom">Nom complet *</label>
+                                        <input class="form-control" id="nom" name="nom" type="text" required
+                                            autocomplete="name">
+                                        <div class="invalid-feedback">Indiquez votre prénom et nom.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="email">Adresse e-mail *</label>
+                                        <input class="form-control" id="email" name="email" type="email" required
+                                            autocomplete="email">
+                                        <div class="invalid-feedback">Indiquez une adresse e-mail valide, par exemple : nom@exemple.com.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="tel">Téléphone ou WhatsApp *</label>
+                                        <input class="form-control" id="tel" name="tel" type="tel" required
+                                            autocomplete="tel" inputmode="tel">
+                                        <div class="invalid-feedback">Indiquez un numéro valide, avec l’indicatif du pays.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="entreprise">Entreprise ou organisation</label>
+                                        <input class="form-control" id="entreprise" name="entreprise" type="text"
+                                            autocomplete="organization">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="ok-rgpd" required>
+                                            <label class="form-check-label" for="ok-rgpd">J’accepte que mes informations
+                                                soient utilisées pour répondre à ma demande et transmises à WhatsApp si je
+                                                choisis de l’envoyer.
+                                                (<a href="confidentialite.html">Voir la politique de confidentialité</a>).
+                                            </label>
+                                            <div class="invalid-feedback">Cochez cette case pour préparer votre demande.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-none" aria-hidden="true">
+                                    <input name="website" tabindex="-1" autocomplete="off">
+                                </div>
+                                <div class="d-flex justify-content-between gap-2 mt-4">
+                                    <button class="btn btn-outline-nx" type="button" data-form-back>Retour</button>
+                                    <button class="btn btn-nx" type="submit">Vérifier ma demande</button>
+                                </div>
+                            </fieldset>
                         </form>
-                        <div class="toast-container position-fixed bottom-0 start-0 p-3">
-                            <div id="ok" class="toast" role="status" aria-live="polite" aria-atomic="true">
-                                <div class="toast-body">Votre demande est prête. Choisissez comment nous l’envoyer pour
-                                    qu’elle nous parvienne.</div>
-                                <a class="btn btn-nx btn-m"
-                                    href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
-                                    target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+                        <section class="nx-card p-4" id="form-confirmation" aria-labelledby="form-confirmation-title"
+                            aria-live="polite" hidden>
+                            <h2 class="h4" id="form-confirmation-title" tabindex="-1">Vérifiez votre demande</h2>
+                            <p>Votre demande n’est pas encore envoyée. Vérifiez le récapitulatif, puis choisissez de l’ouvrir dans WhatsApp.</p>
+                            <dl class="row" id="request-summary"></dl>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline-nx" type="button" id="edit-request">Modifier ma demande</button>
+                                <a class="btn btn-nx" id="send-whatsapp" href="#" target="_blank"
+                                    rel="noopener noreferrer">Continuer vers WhatsApp</a>
                             </div>
-                        </div>
+                        </section>
                     </div>
                     <div class="col-lg-4">
                         <div class="nx-card p-4">

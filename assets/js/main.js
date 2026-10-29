@@ -22,20 +22,94 @@ const year=document.getElementById('an');
 if(year)year.textContent=new Date().getFullYear();
 const fb=document.querySelectorAll('[data-filter]');
 fb.forEach(b=>b.addEventListener('click',()=>{fb.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});b.classList.add('active');b.setAttribute('aria-pressed','true');document.querySelectorAll('[data-cat]').forEach(c=>{c.hidden=b.dataset.filter!=='all'&&c.dataset.cat!==b.dataset.filter})}));
-const fm=document.querySelector('.needs-validation');
+const fm=document.getElementById('devis-form');
 if(fm){
-  fm.addEventListener('submit',e=>{
-    e.preventDefault();
+  const steps=Array.from(fm.querySelectorAll('[data-form-step]'));
+  const stepNames=['Votre projet','Votre besoin','Vos coordonnées'];
+  const stepLabel=document.getElementById('form-step-label');
+  const progress=fm.querySelector('[role="progressbar"]');
+  const progressBar=document.getElementById('form-progress');
+  const confirmation=document.getElementById('form-confirmation');
+  const summary=document.getElementById('request-summary');
+  const whatsappLink=document.getElementById('send-whatsapp');
+  let activeStep=0;
+
+  const showStep=index=>{
+    activeStep=index;
+    steps.forEach((step,i)=>{step.hidden=i!==index});
+    stepLabel.textContent=`Étape ${index+1} sur ${steps.length} : ${stepNames[index]}`;
+    progress.setAttribute('aria-valuenow',String(index+1));
+    progressBar.style.width=`${((index+1)/steps.length)*100}%`;
+  };
+
+  fm.querySelectorAll('[data-form-next]').forEach(button=>button.addEventListener('click',()=>{
+    const invalidField=steps[activeStep].querySelector('input:invalid, select:invalid, textarea:invalid');
     fm.classList.add('was-validated');
-    const honeypot=typeof fm.website !== 'undefined' ? fm.website.value : '';
-    if(fm.checkValidity()&&!honeypot){
-      const toastEl=document.getElementById('ok');
-      if(toastEl && bootstrap?.Toast){
-        bootstrap.Toast.getOrCreateInstance(toastEl).show();
-      }
-      fm.reset();
-      fm.classList.remove('was-validated');
+    if(invalidField){
+      invalidField.focus();
+      return;
     }
+    showStep(activeStep+1);
+    steps[activeStep].querySelector('input, select, textarea')?.focus();
+  }));
+
+  fm.querySelectorAll('[data-form-back]').forEach(button=>button.addEventListener('click',()=>{
+    showStep(activeStep-1);
+    steps[activeStep].querySelector('input, select, textarea')?.focus();
+  }));
+
+  fm.addEventListener('submit',event=>{
+    event.preventDefault();
+    fm.classList.add('was-validated');
+    const invalidField=Array.from(fm.querySelectorAll('input, select, textarea'))
+      .find(field=>field.willValidate&&!field.checkValidity());
+    if(invalidField){
+      const fieldStep=steps.findIndex(step=>step.contains(invalidField));
+      if(fieldStep!==-1)showStep(fieldStep);
+      invalidField.focus();
+      return;
+    }
+    if(fm.elements.namedItem('website').value)return;
+
+    const value=id=>document.getElementById(id).value.trim();
+    const selected=id=>document.getElementById(id).selectedOptions[0].textContent.trim();
+    const details=[
+      ['Type de projet',selected('type')],
+      ['Délai souhaité',selected('delai')],
+      ['Budget indicatif',value('budget')||'À discuter'],
+      ['Description',value('message')],
+      ['Nom',value('nom')],
+      ['E-mail',value('email')],
+      ['Téléphone / WhatsApp',value('tel')]
+    ];
+    if(value('entreprise'))details.push(['Entreprise / organisation',value('entreprise')]);
+
+    summary.replaceChildren();
+    details.forEach(([label,text])=>{
+      const term=document.createElement('dt');
+      term.className='col-sm-4';
+      term.textContent=label;
+      const description=document.createElement('dd');
+      description.className='col-sm-8';
+      description.textContent=text;
+      summary.append(term,description);
+    });
+
+    const message=[
+      'Bonjour NexaWeb Mali, je souhaite demander un devis.',
+      ...details.map(([label,text])=>`${label} : ${text}`)
+    ].join('\n');
+    whatsappLink.href=`https://wa.me/22382890992?text=${encodeURIComponent(message)}`;
+    fm.hidden=true;
+    confirmation.hidden=false;
+    confirmation.querySelector('h2').focus();
+  });
+
+  document.getElementById('edit-request').addEventListener('click',()=>{
+    confirmation.hidden=true;
+    fm.hidden=false;
+    showStep(2);
+    steps[activeStep].querySelector('input')?.focus();
   });
 }
 const t=document.getElementById('top');
