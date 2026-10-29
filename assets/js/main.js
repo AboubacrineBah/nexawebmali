@@ -1,3 +1,23 @@
+const maintenanceScript = document.currentScript;
+if (maintenanceScript) {
+  const maintenanceConfigUrl = new URL('../../maintenance.json', maintenanceScript.src);
+  maintenanceConfigUrl.searchParams.set('v', Date.now().toString());
+
+  fetch(maintenanceConfigUrl, { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Impossible de vérifier le mode maintenance (${response.status}).`);
+      }
+      return response.json();
+    })
+    .then(config => {
+      if (config.enabled === true) {
+        window.location.replace(new URL('../../maintenance.html', maintenanceScript.src));
+      }
+    })
+    .catch(error => console.error('Vérification du mode maintenance échouée :', error));
+}
+
 const year=document.getElementById('an');
 if(year)year.textContent=new Date().getFullYear();
 const fb=document.querySelectorAll('[data-filter]');

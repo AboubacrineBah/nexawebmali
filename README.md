@@ -35,6 +35,7 @@ NexaWeb Mali conçoit des sites, des applications et des solutions digitales mod
 | Étude de cas | `realisations/[projet].html` | Modèle de page pour détailler un projet |
 | À propos | `a-propos.html` | Histoire, vision, valeurs, parcours |
 | Contact & devis | `contact.html` | Formulaire de devis, coordonnées, WhatsApp |
+| Maintenance | `maintenance.html` | Page affichée lorsque le mode maintenance est activé |
 | Mentions légales | `mentions-legales.html` | Informations légales |
 | Confidentialité | `confidentialite.html` | Données personnelles et cookies |
 | Erreur 404 | `404.html` | Page d'erreur avec liens utiles |
@@ -108,6 +109,12 @@ nexawebmali/
 Le site est publié gratuitement avec **GitHub Pages**, à partir de la branche principale du dépôt (dossier racine). Chaque fois qu'une modification est envoyée sur GitHub (commit puis push), le site se met à jour automatiquement en une à deux minutes.
 
 Comme le site est servi depuis le sous-dossier `/nexawebmali/`, les liens vers les fichiers (CSS, JavaScript, images, autres pages) doivent être des **chemins relatifs** (`assets/css/style.css`) et non des chemins commençant par une barre oblique (`/assets/css/style.css`).
+
+### Activer le mode maintenance
+
+Pour afficher la page de maintenance, modifiez `maintenance.json` et remplacez `"enabled": false` par `"enabled": true`, puis envoyez la modification sur GitHub. Le site redirige alors les visiteurs vers `maintenance.html` après le déploiement. Pour rétablir le site, remettez la valeur à `false` et publiez à nouveau.
+
+GitHub Pages étant un hébergement statique, cette redirection est effectuée dans le navigateur par JavaScript : elle ne renvoie pas le statut HTTP 503 et ne s'applique pas aux visiteurs qui désactivent JavaScript. Le mode nécessite également que la page et le fichier de configuration soient accessibles.
 
 ## Identité visuelle
 
