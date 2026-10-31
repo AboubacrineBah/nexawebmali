@@ -11,6 +11,12 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#16213C">
     <link rel="canonical" href="https://aboubacrinebah.github.io/nexawebmali/en/">
+    <link rel="alternate" hreflang="fr" href="https://aboubacrinebah.github.io/nexawebmali/">
+    <link rel="alternate" hreflang="en" href="https://aboubacrinebah.github.io/nexawebmali/en/">
+    <link rel="alternate" hreflang="bm" href="https://aboubacrinebah.github.io/nexawebmali/bm/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://aboubacrinebah.github.io/nexawebmali/zh/">
+    <link rel="alternate" hreflang="ru" href="https://aboubacrinebah.github.io/nexawebmali/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://aboubacrinebah.github.io/nexawebmali/">
     <meta property="og:title" content="NexaWeb Mali — Web developer in Bamako | WordPress, React, PHP">
     <meta property="og:description"
         content="NexaWeb Mali creates custom WordPress websites, e-commerce stores, and web applications in Bamako, for Mali and the international market.">
@@ -38,7 +44,7 @@
             "@context":"https://schema.org",
             "@type":"ProfessionalService",
             "name":"NexaWeb Mali",
-            "url":"https://aboubacrinebah.github.io/nexawebmali/en/",
+            "url":"https://aboubacrinebah.github.io/nexawebmali/en/index.html",
             "telephone":"+22382890992",
             "email":"bahaboubacrine1@gmail.com",
             "address":{"@type":"PostalAddress","addressLocality":"Bamako","addressCountry":"ML"}
@@ -85,6 +91,16 @@
                             <li class="nav-item"><a class="nav-link" href="services.html">Services</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="realisations.html">Portfolio</a></li>
+                            <li class="nav-item">
+                                <label class="visually-hidden" for="language-switcher">Choose language</label>
+                                <select class="form-select form-select-sm" id="language-switcher" data-language-switcher hidden>
+                                    <option value="fr">Français</option>
+                                    <option value="en">English</option>
+                                    <option value="bm">Bamanankan</option>
+                                    <option value="zh">简体中文</option>
+                                    <option value="ru">Русский</option>
+                                </select>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -96,10 +112,10 @@
             <div class="container py-lg-5">
                 <div class="col-lg-7">
                     <h3>Web Developer · Bamako, Mali</h3>
-                    <h1>The Malian digital, built for the world.</h1>
+                    <h1>Digital from Mali, built for the world.</h1>
                     <p class="lead nx-muted my-4">
-                        WordPress sites, online stores and React applications : robust, aesthetic and scalable web
-                        solutions for businesses, entrepreneurs and organizations.
+                        WordPress websites, online stores, and React applications: robust, polished, and scalable
+                        digital solutions for businesses, entrepreneurs, and organizations.
                     </p>
                     <div class="d-grid d-sm-flex gap-2">
                         <a class="btn btn-nx btn-lg" href="contact.html">Get a quote</a>
@@ -122,19 +138,19 @@
         </div>
         <section class="py-5 nx-alt">
             <div class="container">
-                <h2>Between the premium agency and the low-cost that disappoints, there is NexaWeb Mali.</h2>
+                <h2>Between high agency prices and low-cost services that disappoint, there's NexaWeb Mali.</h2>
                 <p class="nx-muted mb-4">
-                    The local offer is often divided between agencies with very high prices and
-                    unreliable services at low prices. NexaWeb Mali offers another path: an agile
-                    development studio, clearly announced costs and a dual mastery of WordPress and
-                    React/PHP to deliver solid, readable and performant platforms.
+                    The local market often forces businesses to choose between high-priced agencies and
+                    low-cost services that can be unreliable. NexaWeb Mali offers another way: an agile
+                    development studio with transparent pricing and expertise in both WordPress and React/PHP,
+                    building robust, accessible, high-performing platforms.
                 </p>
             </div>
         </section>
         <section class="py-5">
             <div class="container">
-                <h2>Three poles, one same requirement of quality</h2>
-                <p class="nx-muted mb-4">From creation to maintenance.</p>
+                <h2>Three service areas, one commitment to quality</h2>
+                <p class="nx-muted mb-4">From launch through ongoing maintenance.</p>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
                         <div class="nx-card h-100 p-4">
@@ -165,18 +181,16 @@
         </section>
         <section class="py-5 nx-alt">
             <div class="container">
-                <h2>Nos réalisations</h2>
+                <h2>Our work</h2>
                 <p class="nx-muted mb-4">
-                    Un aperçu de notre travail.
+                    A glimpse of our work.
                 </p>
                 <ul class="list-group nx-muted mb-4">
-                    <li class="list-group-item">Les projets marqués <span class="badge text-bg-primary mb-2">Projet de
-                            démonstration</span> ont été conçus par NexaWeb Mali
-                        pour montrer notre méthode et
-                        notre niveau de finition.</li>
-                    <li class="list-group-item">Les projets marqués <span class="badge text-bg-warning mb-2">Projet en
-                            production</span> sont toujours en phase de
-                        developpement.</li>
+                    <li class="list-group-item">Projects marked <span class="badge text-bg-primary mb-2">“Demo
+                            project”</span> were created by NexaWeb Mali to showcase our approach and quality of work.
+                    </li>
+                    <li class="list-group-item">Projects marked <span class="badge text-bg-warning mb-2">“In
+                            production”</span> are still under development.</li>
                 </ul>
                 <hr>
                 <div class="row g-4">
@@ -185,20 +199,20 @@
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                                 <img class="w-100 h-100 object-fit-cover"
                                     src="../assets/images/nexaweb-mali-wordpress/NexaWeb Mali.png"
-                                    alt="Site vitrine NexaWeb Mali sous WordPress">
+                                    alt="NexaWeb Mali showcase website built with WordPress">
                             </div>
                             <div class="p-4">
-                                <span class="badge text-bg-primary mb-2">Projet de démonstration</span>
+                                <span class="badge text-bg-primary mb-2">Demo project</span>
                                 <h3>NexaWeb MALI</h3>
-                                <p>Site vitrine avec menu, preuve de savoir-faire et demande de devis pour la création
-                                    de site web.</p>
+                                <p>A showcase website featuring a menu, examples of our work, and a website quote
+                                    request form.</p>
                                 <p>
                                     <span class="badge text-bg-light border me-1">WordPress</span>
                                     <span class="badge text-bg-light border me-1">PHP</span>
                                 </p>
-                                <a href="realisations/nexaweb-mali-wordpress.html">Lire l’étude de cas</a>
+                                <a href="realisations/nexaweb-mali-wordpress.html">Read the case study</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#sitewordpress">Aperçu</button>
+                                    data-bs-target="#sitewordpress">Preview</button>
                             </div>
                         </article>
                     </div>
@@ -207,21 +221,21 @@
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                                 <img class="w-100 h-100 object-fit-cover"
                                     src="../assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.jpeg"
-                                    alt="Page d’accueil du site NexaWeb Mali sous Bootstrap">
+                                    alt="NexaWeb Mali homepage built with Bootstrap">
                             </div>
                             <div class="p-4">
-                                <span class="badge text-bg-primary mb-2">Projet de démonstration</span>
+                                <span class="badge text-bg-primary mb-2">Demo project</span>
                                 <h3>NexaWeb MALI</h3>
-                                <p>Site vitrine avec menu et demande de devis de service.</p>
+                                <p>A showcase website with a menu and a service quote request form.</p>
                                 <p>
                                     <span class="badge text-bg-light border me-1">HTML5</span>
                                     <span class="badge text-bg-light border me-1">CSS3</span>
                                     <span class="badge text-bg-light border me-1">JavaScript</span>
                                     <span class="badge text-bg-light border me-1">Bootstrap</span>
                                 </p>
-                                <a href="realisations/nexaweb-mali-bootstrap.html">Lire l’étude de cas</a>
+                                <a href="realisations/nexaweb-mali-bootstrap.html">Read the case study</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#sitebootstrap">Aperçu</button>
+                                    data-bs-target="#sitebootstrap">Preview</button>
                             </div>
                         </article>
                     </div>
@@ -230,12 +244,12 @@
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                                 <img class="w-100 h-100 object-fit-cover"
                                     src="../assets/images/afrique-artisanat/public/accueil.png"
-                                    alt="Boutique d’artisanat en production">
+                                    alt="Screenshot of the Artisan craft store homepage">
                             </div>
                             <div class="p-4">
-                                <span class="badge text-bg-primary mb-2">Projet de démonstration</span>
-                                <h3>Boutique d’artisanat</h3>
-                                <p>Boutique en ligne pour un atelier d'artisanat.</p>
+                                <span class="badge text-bg-primary mb-2">Demo project</span>
+                                <h3>Artisan craft store</h3>
+                                <p>An online store for a craft workshop.</p>
                                 <p>
                                     <span class="badge text-bg-light border me-1">Bootstrap</span>
                                     <span class="badge text-bg-light border me-1">Laravel</span>
@@ -244,9 +258,9 @@
                                     <span class="badge text-bg-light border me-1">Vite</span>
                                     <span class="badge text-bg-light border me-1">PHPUnit</span>
                                 </p>
-                                <a href="realisations/afrique-artisanat.html">Lire l’étude de cas</a>
+                                <a href="realisations/afrique-artisanat.html">Read the case study</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#siteecommerce">Aperçu</button>
+                                    data-bs-target="#siteecommerce">Preview</button>
                             </div>
                         </article>
                     </div>
@@ -254,71 +268,71 @@
                         <article class="nx-card h-100 overflow-hidden">
                             <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                                 <img class="w-100 h-100 object-fit-cover" src="../assets/images/En production.jpg"
-                                    alt="Application de suivi des dons Association Jigi">
+                                    alt="Association Jigi donation tracking application">
                             </div>
                             <div class="p-4">
-                                <span class="badge text-bg-primary mb-2">Projet de démonstration</span>
-                                <span class="badge text-bg-warning mb-2">Projet en production</span>
+                                <span class="badge text-bg-primary mb-2">Demo project</span>
+                                <span class="badge text-bg-warning mb-2">In production</span>
                                 <h3>Association Jigi</h3>
-                                <p>Application monopage de suivi des dons.</p>
+                                <p>A single-page donation tracking application.</p>
                                 <p>
                                     <span class="badge text-bg-light border me-1">React</span>
                                     <span class="badge text-bg-light border me-1">Bootstrap</span>
                                     <span class="badge text-bg-light border me-1">API Laravel</span>
                                 </p>
-                                <a href="realisations/association-jigi.html">Lire l’étude de cas</a>
+                                <a href="realisations/association-jigi.html">Read the case study</a>
                                 <button class="btn btn-sm btn-outline-nx ms-2" data-bs-toggle="modal"
-                                    data-bs-target="#appreact">Aperçu</button>
+                                    data-bs-target="#appreact">Preview</button>
                             </div>
                         </article>
                     </div>
                 </div>
                 <p class="mt-4">
-                    <a class="btn btn-outline-nx" href="realisations.html">Voir toutes les
-                        réalisations</a>
+                    <a class="btn btn-outline-nx" href="realisations.html">View all
+                        projects</a>
                 </p>
             </div>
         </section>
         <section class="py-5">
             <div class="container">
-                <h2>Comment nous travaillons</h2>
+                <h2>How we work</h2>
                 <ol class="row row-cols-1 row-cols-md-5 g-3 list-unstyled mb-0">
                     <li class="col">
                         <div class="nx-card h-100 p-3">
                             <span class="nx-num">1</span>
                             <h3 class="h5 mt-2">Brief</h3>
-                            <p class="mb-0 small">Nous cadrons vos objectifs, votre public et votre budget.</p>
+                            <p class="mb-0 small">We define your goals, audience, and budget.</p>
                         </div>
                     </li>
                     <li class="col">
                         <div class="nx-card h-100 p-3">
                             <span class="nx-num">2</span>
-                            <h3 class="h5 mt-2">Maquette</h3>
-                            <p class="mb-0 small">Vous validez le design sur mobile et sur ordinateur avant tout
-                                développement.</p>
+                            <h3 class="h5 mt-2">Design</h3>
+                            <p class="mb-0 small">You approve the design on mobile and desktop before development
+                                begins.</p>
                         </div>
                     </li>
                     <li class="col">
                         <div class="nx-card h-100 p-3">
                             <span class="nx-num">3</span>
-                            <h3 class="h5 mt-2">Développement</h3>
-                            <p class="mb-0 small">Nous construisons votre site avec des outils fiables et vous
-                                présentons l’avancement.</p>
+                            <h3 class="h5 mt-2">Development</h3>
+                            <p class="mb-0 small">We build your website with reliable tools and keep you updated on our
+                                progress.</p>
                         </div>
                     </li>
                     <li class="col">
                         <div class="nx-card h-100 p-3">
                             <span class="nx-num">4</span>
-                            <h3 class="h5 mt-2">Recette</h3>
-                            <p class="mb-0 small">Nous testons la vitesse, l’affichage sur mobile et l’accessibilité ;
-                                vous validez le résultat.</p>
+                            <h3 class="h5 mt-2">Testing and approval</h3>
+                            <p class="mb-0 small">We test speed, mobile display, and accessibility; you approve the
+                                final result.</p>
                         </div>
                     </li>
                     <li class="col">
                         <div class="nx-card h-100 p-3">
                             <span class="nx-num">5</span>
-                            <h3 class="h5 mt-2">Mise en ligne</h3>
-                            <p class="mb-0 small">Nous publions votre site, vous le présentons et proposons un suivi de
+                            <h3 class="h5 mt-2">Launch</h3>
+                            <p class="mb-0 small">We launch your website, show you how it works, and offer ongoing
                                 maintenance.</p>
                         </div>
                     </li>
@@ -327,37 +341,38 @@
         </section>
         <section class="py-5 nx-alt">
             <div class="container">
-                <h2>Ce qui guide chaque projet</h2>
+                <h2>What guides every project</h2>
                 <div class="row g-4">
                     <div class="col-6 col-lg-3">
-                        <h3 class="h5">Excellence technique</h3>
-                        <p class="mb-0">Nous appliquons les meilleures pratiques de programmation.</p>
+                        <h3 class="h5">Technical excellence</h3>
+                        <p class="mb-0">We follow software development best practices.</p>
                     </div>
                     <div class="col-6 col-lg-3">
-                        <h3 class="h5">Transparence</h3>
-                        <p class="mb-0">Une clarté totale sur les coûts et les délais.</p>
+                        <h3 class="h5">Transparency</h3>
+                        <p class="mb-0">Clear pricing and timelines.</p>
                     </div>
                     <div class="col-6 col-lg-3">
-                        <h3 class="h5">Agilité</h3>
-                        <p class="mb-0">Nous nous adaptons vite aux évolutions technologiques.</p>
+                        <h3 class="h5">Agility</h3>
+                        <p class="mb-0">We adapt quickly to technological change.</p>
                     </div>
                     <div class="col-6 col-lg-3">
                         <h3 class="h5">Impact</h3>
-                        <p class="mb-0">Des interfaces orientées vers le retour sur investissement.</p>
+                        <p class="mb-0">Interfaces designed to deliver a strong return on investment.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="nx-dark py-5 text-center">
             <div class="container">
-                <h2>Parlons de votre projet.</h2>
-                <p class="nx-muted">Décrivez votre besoin en quelques lignes. Nous revenons vers vous avec une
-                    réponse claire et un devis détaillé.</p>
+                <h2>Let’s talk about your project.</h2>
+                <p class="nx-muted">Describe what you need in a few words. We’ll get back to you with a clear response
+                    and a detailed quote.</p>
                 <div class="d-grid d-sm-flex gap-2 justify-content-center">
-                    <a class="btn btn-nx btn-lg" href="contact.html">Demander un devis</a>
+                    <a class="btn btn-nx btn-lg" href="contact.html">Request a quote</a>
                     <a class="btn btn-outline-light btn-lg"
                         href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
-                        target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+                        target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -366,14 +381,14 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title h5" id="sitewordpressTitle">Aperçu du projet</h2>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    <h2 class="modal-title h5" id="sitewordpressTitle">Project preview</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                         <img class="w-100 h-100 object-fit-contain"
                             src="../assets/images/nexaweb-mali-wordpress/Capture d’écran page d'accueil.jpeg"
-                            alt="Capture agrandie du site NexaWeb Mali sous WordPress">
+                            alt="Enlarged screenshot of the NexaWeb Mali WordPress website">
                     </div>
                 </div>
             </div>
@@ -383,14 +398,14 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title h5" id="sitebootstrapTitle">Aperçu du projet</h2>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    <h2 class="modal-title h5" id="sitebootstrapTitle">Project preview</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                         <img class="w-100 h-100 object-fit-contain"
                             src="../assets/images/nexaweb-mali-bootstrap/Nexaweb mali accueil.jpeg"
-                            alt="Capture agrandie du site NexaWeb Mali sous Bootstrap">
+                            alt="Enlarged screenshot of the NexaWeb Mali Bootstrap website">
                     </div>
                 </div>
             </div>
@@ -400,14 +415,14 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title h5" id="siteecommerceTitle">Aperçu du projet</h2>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    <h2 class="modal-title h5" id="siteecommerceTitle">Project preview</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                         <img class="w-100 h-100 object-fit-content"
                             src="../assets/images/afrique-artisanat/public/accueil.png"
-                            alt="Capture agrandie de la boutique d’artisanat en production">
+                            alt="Enlarged screenshot of the artisan craft store">
                     </div>
                 </div>
             </div>
@@ -417,13 +432,13 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title h5" id="appreactTitle">Aperçu du projet</h2>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    <h2 class="modal-title h5" id="appreactTitle">Project preview</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio nx-shot" style="--bs-aspect-ratio:62.5%">
                         <img class="w-100 h-100 object-fit-contain" src="../assets/images/En production.jpg"
-                            alt="Capture agrandie de l’application de suivi des dons Association Jigi">
+                            alt="Enlarged screenshot of the Association Jigi donation tracking application">
                     </div>
                 </div>
             </div>
@@ -433,7 +448,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-md-6 col-lg-4">
-                    <a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, accueil">
+                    <a class="nx-brand" href="index.html" aria-label="NexaWeb Mali, home">
                         <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40'
                             aria-hidden='true'>
                             <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff'
@@ -448,15 +463,15 @@
                         </svg>
                         <span class="nx-word">NexaWeb<small>MALI</small></span>
                     </a>
-                    <p class="mt-3">Le digital malien, pensé pour le monde.</p>
+                    <p class="mt-3">Digital from Mali, built for the world.</p>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h2>Navigation</h2>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="a-propos.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="realisations.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -480,15 +495,15 @@
             </div>
             <hr class="my-4">
             <p class="small mb-0"> © <span id="an">2026</span> NexaWeb Mali.
-                <a href="mentions-legales.html">Mentions légales</a> et
-                <a href="confidentialite.html">confidentialité</a>.
+                <a href="mentions-legales.html">Legal notice</a> and
+                <a href="confidentialite.html">Privacy Policy</a>.
             </p>
         </div>
     </footer>
     <a class="btn btn-nx nx-wa"
         href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis." target="_blank"
         rel="noopener noreferrer">WhatsApp</a>
-    <button class="btn nx-top" id="top" aria-label="Retour en haut" hidden>↑</button>
+    <button class="btn nx-top" id="top" aria-label="Back to top" hidden>↑</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

@@ -1,0 +1,183 @@
+name: Site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Vérifier la syntaxe JavaScript
+        run: node --check assets/js/main.js
+
+      - name: Vérifier les pages HTML et leurs liens
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlparse
+
+          root = Path(".").resolve()
+          site_path = "/nexawebmali/"
+          languages = {
+              "fr": "fr",
+              "en": "en",
+              "bm": "bm",
+              "zh": "zh-Hans",
+              "ru": "ru",
+          }
+          locales = {
+              "fr": "fr_FR",
+              "en": "en_US",
+              "bm": "bm_ML",
+              "zh-Hans": "zh_CN",
+              "ru": "ru_RU",
+          }
+          errors = []
+
+          class Page(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.lang = None
+                  self.canonicals = []
+                  self.descriptions = []
+                  self.locales = []
+                  self.alternates = []
+                  self.references = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+
+                  if tag == "html":
+                      self.lang = attrs.get("lang")
+
+                  if tag in {"a", "link", "script", "img", "source"}:
+                      for name in ("href", "src"):
+                          if attrs.get(name):
+                              self.references.append(attrs[name])
+
+                  if tag == "link":
+                      rel = attrs.get("rel", "").split()
+                      if "canonical" in rel:
+                          self.canonicals.append(attrs.get("href"))
+                      if "alternate" in rel:
+                          self.alternates.append(
+                              (attrs.get("hreflang"), attrs.get("href"))
+                          )
+
+                  if tag == "meta":
+                      if attrs.get("name") == "description":
+                          self.descriptions.append(attrs.get("content"))
+                      if attrs.get("property") == "og:locale":
+                          self.locales.append(attrs.get("content"))
+
+          def local_target(url, source):
+              parsed = urlparse(url)
+
+              if parsed.scheme or parsed.netloc:
+                  if parsed.netloc != "aboubacrinebah.github.io":
+                      return None
+                  if not parsed.path.startswith(site_path):
+                      return None
+                  path = unquote(parsed.path[len(site_path):]).strip("/")
+                  target = root / path if path else root / "index.html"
+              else:
+                  path = unquote(parsed.path)
+                  if not path:
+                      return None
+                  if path.startswith(site_path):
+                      target = root / path[len(site_path):]
+                  elif path.startswith("/"):
+                      target = root / path.lstrip("/")
+                  else:
+                      target = source.parent / path
+
+              if path and parsed.path.endswith("/"):
+                  target = target / "index.html"
+
+              return target.resolve()
+
+          files = sorted(
+              path for path in root.rglob("*.html")
+              if "node_modules" not in path.parts and ".git" not in path.parts
+          )
+
+          for file in files:
+              relative = file.relative_to(root).as_posix()
+              page = Page()
+              page.feed(file.read_text(encoding="utf-8"))
+
+              folder = relative.split("/", 1)[0]
+              expected_lang = languages.get(folder, "fr")
+
+              if page.lang != expected_lang:
+                  errors.append(f"{relative}: langue HTML incorrecte ({page.lang})")
+
+              for reference in page.references:
+                  target = local_target(reference, file)
+                  if target is not None and not target.exists():
+                      errors.append(f"{relative}: lien local introuvable ({reference})")
+
+              robots = " ".join(
+                  line for line in file.read_text(encoding="utf-8").splitlines()
+                  if 'name="robots"' in line
+              )
+              if "noindex" in robots:
+                  continue
+
+              if len(page.canonicals) != 1 or not page.canonicals[0]:
+                  errors.append(f"{relative}: balise canonical absente ou multiple")
+              else:
+                  canonical = urlparse(page.canonicals[0])
+                  expected_path = site_path + relative
+                  if relative == "index.html":
+                      expected_path = site_path
+                  elif relative.endswith("/index.html"):
+                      expected_path = site_path + relative[:-len("index.html")]
+
+                  if canonical.netloc != "aboubacrinebah.github.io":
+                      errors.append(f"{relative}: domaine canonical incorrect")
+                  if canonical.path != expected_path:
+                      errors.append(f"{relative}: chemin canonical incorrect")
+
+              if not page.descriptions or not page.descriptions[0]:
+                  errors.append(f"{relative}: meta description absente")
+              if page.locales != [locales[expected_lang]]:
+                  errors.append(f"{relative}: locale Open Graph absente ou incorrecte")
+
+              if file.name == "404.html":
+                  continue
+
+              expected_hreflangs = {"fr", "en", "bm", "zh-Hans", "ru", "x-default"}
+              actual_hreflangs = {lang for lang, _ in page.alternates}
+
+              if actual_hreflangs != expected_hreflangs:
+                  errors.append(f"{relative}: liens hreflang incomplets")
+
+              for _, url in page.alternates:
+                  target = local_target(url, file)
+                  if target is None or not target.exists():
+                      errors.append(f"{relative}: cible hreflang introuvable ({url})")
+
+          if errors:
+              print("\n".join(errors))
+              raise SystemExit(1)
+
+          print(f"Contrôles réussis pour {len(files)} pages HTML.")
+          PY
