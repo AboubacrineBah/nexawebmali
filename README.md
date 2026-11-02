@@ -7,6 +7,20 @@
 
 > **Le digital malien, pensé pour le monde.**
 
+## Aperçu du site
+
+<table>
+  <tr>
+    <td align="center"><strong>Accueil</strong><br><img src="assets/images/nexaweb-mali-bootstrap/Nexaweb%20mali%20accueil.jpeg" alt="Capture de la page d'accueil" width="240"></td>
+    <td align="center"><strong>À propos</strong><br><img src="assets/images/nexaweb-mali-bootstrap/Nexaweb%20mali%20apropos.jpeg" alt="Capture de la page À propos" width="240"></td>
+    <td align="center"><strong>Services</strong><br><img src="assets/images/nexaweb-mali-bootstrap/Nexaweb%20mali%20services.jpeg" alt="Capture de la page Services" width="240"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Réalisations</strong><br><img src="assets/images/nexaweb-mali-bootstrap/Nexaweb%20mali%20realisations.jpeg" alt="Capture de la page Réalisations" width="240"></td>
+    <td align="center"><strong>Contact</strong><br><img src="assets/images/nexaweb-mali-bootstrap/Nexaweb%20mali%20contact.jpeg" alt="Capture de la page Contact" width="240"></td>
+  </tr>
+</table>
+
 🌐 **Site en ligne :** https://aboubacrinebah.github.io/nexawebmali/
 
 Site vitrine et portfolio de **NexaWeb Mali**, activité de développement web basée à Bamako (Mali). Ce dépôt contient l'interface utilisateur (front-end) du site, construite avec **Bootstrap 5**.
