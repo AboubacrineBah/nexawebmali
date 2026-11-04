@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexaStock — Laravel | Разбор проекта | NexaWeb Mali</title>
+    <meta name="description"
+        content="Проект NexaStock: учет запасов для малого бизнеса в Мали с отслеживанием движений товаров, пороговыми уведомлениями и ролевым доступом.">
+    <link rel="canonical" href="https://aboubacrinebah.github.io/nexawebmali/ru/realisations/nexastock.html">
+    <link rel="alternate" hreflang="fr" href="https://aboubacrinebah.github.io/nexawebmali/realisations/nexastock.html">
+    <link rel="alternate" hreflang="en" href="https://aboubacrinebah.github.io/nexawebmali/en/realisations/nexastock.html">
+    <link rel="alternate" hreflang="bm" href="https://aboubacrinebah.github.io/nexawebmali/bm/realisations/nexastock.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://aboubacrinebah.github.io/nexawebmali/zh/realisations/nexastock.html">
+    <link rel="alternate" hreflang="ru" href="https://aboubacrinebah.github.io/nexawebmali/ru/realisations/nexastock.html">
+    <link rel="alternate" hreflang="x-default" href="https://aboubacrinebah.github.io/nexawebmali/realisations/nexastock.html">
+    <meta property="og:title" content="NexaStock | Разбор проекта | NexaWeb Mali">
+    <meta property="og:description"
+        content="Проект NexaStock: учет запасов для малого бизнеса в Мали с отслеживанием движений товаров, пороговыми уведомлениями и ролевым доступом.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/nx.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenu">Перейти к содержимому</a>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top nx-navbar" data-bs-theme="dark">
+            <div class="container">
+                <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali, главная">
+                    <span class="nx-word">NexaWeb<small>MALI</small></span>
+                </a>
+                <a class="btn btn-nx ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" href="../contact.html">Запросить расчет</a>
+                <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"
+                    aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="menu" tabindex="-1" aria-labelledby="menuT">
+                    <div class="offcanvas-header">
+                        <span class="offcanvas-title h5" id="menuT">Меню</span>
+                        <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-lg-auto gap-lg-3">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../a-propos.html">О нас</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../services.html">Услуги</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../realisations.html">Проекты</a></li>
+                            <li class="nav-item">
+                                <label class="visually-hidden" for="language-switcher">Выберите язык</label>
+                                <select class="form-select form-select-sm" id="language-switcher" data-language-switcher hidden>
+                                    <option value="fr">Français</option>
+                                    <option value="en">English</option>
+                                    <option value="bm">Bamanankan</option>
+                                    <option value="zh">简体中文</option>
+                                    <option value="ru">Русский</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="nx-dark py-5">
+            <div class="container py-lg-4">
+                <div class="col-lg-8">
+                    <h1>NexaStock</h1>
+                    <p class="lead nx-muted mt-3 mb-0">Учет запасов для малого бизнеса</p>
+                    <p>Система учета запасов помогает малийским магазинам, дистрибьюторам и мастерским видеть, что
+                        есть в наличии, что перемещается и что пора пополнить.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="col-lg-9">
+                    <dl class="row nx-card p-3 mb-4">
+                        <dt class="col-5 col-md-3">Клиент:</dt>
+                        <dd class="col-7 col-md-3">NexaWeb Mali (внутренний продукт).</dd>
+                        <dt class="col-5 col-md-3">Отрасль:</dt>
+                        <dd class="col-7 col-md-3">Розничная торговля, дистрибуция и мастерские.</dd>
+                        <dt class="col-5 col-md-3">Год:</dt>
+                        <dd class="col-7 col-md-3">2026.</dd>
+                        <dt class="col-5 col-md-3">Срок:</dt>
+                        <dd class="col-7 col-md-3">3 месяца.</dd>
+                        <dt class="col-5 col-md-3">Роли:</dt>
+                        <dd class="col-7 col-md-3 mb-0">Анализ задач, UX/UI-дизайн, разработка серверной и клиентской
+                            частей, тестирование, документация и развертывание.</dd>
+                        <dt class="col-5 col-md-3">Технологии:</dt>
+                        <dd class="col-7 col-md-3 mb-0">Laravel, PHP, MySQL, Bootstrap 5, Vite, PHPUnit.</dd>
+                    </dl>
+
+                    <h2 class="h3 mt-4">Контекст</h2>
+                    <p>Многие небольшие компании в Мали — магазины, мелкие дистрибьюторы и мастерские — ведут учет
+                        запасов в тетрадях или таблицах либо используют инструменты, в которых трудно проследить
+                        историю. Из-за этого о нехватке товара узнают слишком поздно, расхождения сложно объяснить,
+                        а движение запасов плохо видно. NexaStock решает эту задачу с помощью простой панели:
+                        показывает остатки, движения и товары для пополнения. Объем MVP предстоит подтвердить с
+                        3–5 пилотными компаниями в Бамако.</p>
+
+                    <h2 class="h3 mt-4">Задачи</h2>
+                    <p><strong>Точные и прослеживаемые остатки:</strong> каждый остаток должен объясняться
+                        подтвержденными движениями без незаметного изменения данных.</p>
+                    <hr>
+                    <p><strong>Разделение данных компаний:</strong> клиент не должен читать или изменять данные
+                        другой компании, в том числе подменив идентификатор в URL или экспортировав данные.</p>
+                    <hr>
+                    <p><strong>Повседневная работа прежде всего с телефона:</strong> быстрый ввод за несколько
+                        нажатий, легкий интерфейс при перебоях сети или электричества и загрузка типовых страниц
+                        менее чем за 3 секунды.</p>
+                    <hr>
+                    <p><strong>Управляемый MVP для небольшой команды:</strong> бухгалтерия, касса, нативное
+                        приложение, офлайн-режим и расширенный учет партий не входят в первую версию.</p>
+
+                    <h2 class="h3 mt-4">Решения</h2>
+                    <p><strong>Laravel (MVC) и MySQL:</strong> 9 бизнес-сущностей (компания, пользователь, роль,
+                        товар, категория, место хранения, движение, поставщик и инвентаризация); для движений и
+                        перемещений используются атомарные транзакции.</p>
+                    <hr>
+                    <p><strong>Неизменяемые записи движений:</strong> поступления, списания, корректировки и
+                        перемещения фиксируют количество, дату, причину и автора. Исправление или отмена создает
+                        связанное компенсирующее движение, а журнал аудита хранит сведения о важных действиях.</p>
+                    <hr>
+                    <p><strong>Контроль доступа на сервере:</strong> 4 роли (администратор NexaWeb, администратор
+                        компании, менеджер запасов и оператор), защищенные сеансы, защита CSRF, ограничение попыток
+                        входа, хеширование паролей и HTTPS в рабочей среде.</p>
+                    <hr>
+                    <p><strong>Пошаговые сценарии и интерфейс продукта:</strong> приемка, списание (отрицательный
+                        остаток запрещен), инвентаризация с обоснованными корректировками, экспортируемый список
+                        пополнения и импорт CSV с предварительным просмотром ошибок. Адаптивный интерфейс Blade
+                        использует фирменные логотип и палитру NexaStock; уведомления обозначены текстом и значком,
+                        а не только цветом.</p>
+                    <hr>
+                    <p><strong>Эксплуатация и качество:</strong> среды разработки, тестирования и эксплуатации;
+                        секреты вне репозитория; автоматические резервные копии с документированными проверками
+                        восстановления; услуга RUN для обновлений и поддержки.</p>
+
+                    <h2 class="h3 mt-4">Результаты</h2>
+                    <ul class="list-unstyled">
+                        <li class="py-2 border-bottom">Определен состав MVP: 11 модулей, включая 8 обязательных
+                            (доступ, товары, движения, уведомления, инвентаризация, отчеты, журнал аудита и рабочие
+                            пространства компаний)</li>
+                        <li class="py-2 border-bottom">Описаны 5 основных сценариев в 7 группах экранов: приемка,
+                            списание, инвентаризация, пополнение и импорт каталога</li>
+                        <li class="py-2 border-bottom">Составлен 11 проверяемых критериев приемки, включая изоляцию
+                            компаний, отслеживание исправлений, мобильную работу и восстановление резервных копий</li>
+                        <li class="py-2 border-bottom">Запланирована проверка с пользователями: 15 интервью в Бамако,
+                            3–5 пилотных компаний и цель — вводить в систему не менее 80% повседневных операций</li>
+                        <li class="py-2 border-bottom">Время загрузки, оценки Lighthouse, удержание пилотных клиентов
+                            и результаты приемки будут измерены после пилота</li>
+                    </ul>
+
+                    <p class="mt-4"><a class="btn btn-outline-nx btn-sm" href="../realisations.html">
+                            &lt; Назад к проектам</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="nx-footer">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali, главная">
+                        <span class="nx-word">NexaWeb<small>MALI</small></span>
+                    </a>
+                    <p class="mt-3 mb-0">Гибкость, качество и цифровая стратегия для роста брендов.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h2>Навигация</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="../a-propos.html">О нас</a></li>
+                        <li><a href="../services.html">Услуги</a></li>
+                        <li><a href="../realisations.html">Проекты</a></li>
+                        <li><a href="../contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h2>Услуги</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../services.html#build">BUILD</a></li>
+                        <li><a href="../services.html#advanced">ADVANCED</a></li>
+                        <li><a href="../services.html#run">RUN</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h2>Контакты</h2>
+                    <address class="mb-0">Бамако, Мали<br><a
+                            href="mailto:bahaboubacrine1@gmail.com">bahaboubacrine1@gmail.com</a><br><a
+                            href="tel:+22382890992">+223 82 89 09 92</a><br><a
+                            href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
+                            target="_blank" rel="noopener noreferrer">WhatsApp</a></address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="small mb-0">© <span id="an">2026</span> NexaWeb Mali.
+                <a href="../mentions-legales.html">Правовая информация</a> и
+                <a href="../confidentialite.html">политика конфиденциальности</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/main.js" defer></script>
+</body>
+
+</html>

@@ -2,5 +2,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "NikolaosGeorgiou.html-fmt-vscode",
     "editor.wordWrap": "on",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }

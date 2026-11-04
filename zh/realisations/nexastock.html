@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexaStock — Laravel | 案例研究 | NexaWeb Mali</title>
+    <meta name="description"
+        content="NexaStock 案例研究：面向马里小型企业的库存管理工具，提供可追溯的库存变动、阈值提醒和分角色访问。">
+    <link rel="canonical" href="https://aboubacrinebah.github.io/nexawebmali/zh/realisations/nexastock.html">
+    <link rel="alternate" hreflang="fr" href="https://aboubacrinebah.github.io/nexawebmali/realisations/nexastock.html">
+    <link rel="alternate" hreflang="en" href="https://aboubacrinebah.github.io/nexawebmali/en/realisations/nexastock.html">
+    <link rel="alternate" hreflang="bm" href="https://aboubacrinebah.github.io/nexawebmali/bm/realisations/nexastock.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://aboubacrinebah.github.io/nexawebmali/zh/realisations/nexastock.html">
+    <link rel="alternate" hreflang="ru" href="https://aboubacrinebah.github.io/nexawebmali/ru/realisations/nexastock.html">
+    <link rel="alternate" hreflang="x-default" href="https://aboubacrinebah.github.io/nexawebmali/realisations/nexastock.html">
+    <meta property="og:title" content="NexaStock — 案例研究 | NexaWeb Mali">
+    <meta property="og:description"
+        content="NexaStock 案例研究：面向马里小型企业的库存管理工具，提供可追溯的库存变动、阈值提醒和分角色访问。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/nx.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenu">跳转至正文</a>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top nx-navbar" data-bs-theme="dark">
+            <div class="container">
+                <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali，首页">
+                    <span class="nx-word">NexaWeb<small>MALI</small></span>
+                </a>
+                <a class="btn btn-nx ms-auto ms-lg-3 me-2 me-lg-0 order-lg-last" href="../contact.html">获取报价</a>
+                <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"
+                    aria-label="打开菜单">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="menu" tabindex="-1" aria-labelledby="menuT">
+                    <div class="offcanvas-header">
+                        <span class="offcanvas-title h5" id="menuT">菜单</span>
+                        <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="关闭"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-lg-auto gap-lg-3">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">首页</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../a-propos.html">关于我们</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../services.html">服务</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../realisations.html">项目案例</a></li>
+                            <li class="nav-item">
+                                <label class="visually-hidden" for="language-switcher">选择语言</label>
+                                <select class="form-select form-select-sm" id="language-switcher" data-language-switcher hidden>
+                                    <option value="fr">Français</option>
+                                    <option value="en">English</option>
+                                    <option value="bm">Bamanankan</option>
+                                    <option value="zh">简体中文</option>
+                                    <option value="ru">Русский</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="nx-dark py-5">
+            <div class="container py-lg-4">
+                <div class="col-lg-8">
+                    <h1>NexaStock</h1>
+                    <p class="lead nx-muted mt-3 mb-0">面向小型企业的库存管理</p>
+                    <p>这款库存管理产品旨在帮助马里的零售商、经销商和工作坊掌握现有库存、库存流动以及需要补货的商品。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="col-lg-9">
+                    <dl class="row nx-card p-3 mb-4">
+                        <dt class="col-5 col-md-3">客户：</dt>
+                        <dd class="col-7 col-md-3">NexaWeb Mali（内部产品）。</dd>
+                        <dt class="col-5 col-md-3">行业：</dt>
+                        <dd class="col-7 col-md-3">零售、分销和工作坊。</dd>
+                        <dt class="col-5 col-md-3">年份：</dt>
+                        <dd class="col-7 col-md-3">2026 年。</dd>
+                        <dt class="col-5 col-md-3">周期：</dt>
+                        <dd class="col-7 col-md-3">3 个月。</dd>
+                        <dt class="col-5 col-md-3">职责：</dt>
+                        <dd class="col-7 col-md-3 mb-0">需求梳理、UX/UI 设计、前后端开发、测试、文档和部署。</dd>
+                        <dt class="col-5 col-md-3">技术：</dt>
+                        <dd class="col-7 col-md-3 mb-0">Laravel、PHP、MySQL、Bootstrap 5、Vite、PHPUnit。</dd>
+                    </dl>
+
+                    <h2 class="h3 mt-4">背景</h2>
+                    <p>马里的许多小型企业（商店、小型经销商和工作坊）仍用笔记本或电子表格记录库存，或使用无法清晰追踪历史记录的工具。因此，缺货往往发现得太晚，库存差异难以解释，也难以了解商品流动情况。NexaStock 通过简洁的仪表板满足这一需求，显示现有库存、库存变动和待补货商品。MVP 的范围仍需与巴马科的 3 至 5 家试点企业确认。</p>
+
+                    <h2 class="h3 mt-4">挑战</h2>
+                    <p><strong>可靠且可追溯的库存数量：</strong>每个余额都必须能由已确认的库存变动解释，不能静默修改数据。</p>
+                    <hr>
+                    <p><strong>隔离各企业的数据：</strong>任何客户都不能读取或修改其他企业的数据，包括更改 URL 中的标识符或导出数据。</p>
+                    <hr>
+                    <p><strong>以移动端为先的日常使用体验：</strong>几次点击即可快速录入；即使网络或电力中断，界面也应保持轻量；常用页面目标加载时间低于 3 秒。</p>
+                    <hr>
+                    <p><strong>适合小团队维护的 MVP：</strong>第一版不包含会计、收银、原生应用、离线模式和高级批次管理。</p>
+
+                    <h2 class="h3 mt-4">解决方案</h2>
+                    <p><strong>Laravel（MVC）和 MySQL：</strong>9 个业务实体（企业、用户、角色、商品、类别、库位、库存变动、供应商和盘点），并通过原子事务确认库存变动和调拨。</p>
+                    <hr>
+                    <p><strong>不可篡改的库存变动记录：</strong>入库、出库、调整和调拨均记录数量、日期、原因和操作人。更正或取消会创建关联原操作的补偿记录；审计日志记录敏感操作。</p>
+                    <hr>
+                    <p><strong>服务器端访问控制：</strong>4 种角色（NexaWeb 管理员、企业管理员、库存负责人和操作员）、安全会话、CSRF 防护、登录尝试限制、密码哈希以及生产环境 HTTPS。</p>
+                    <hr>
+                    <p><strong>引导式流程和专属界面：</strong>收货、出库（禁止负库存）、带理由的盘点调整、可导出的补货清单，以及可预览错误的 CSV 导入。响应式 Blade 界面采用 NexaStock 专属标识和配色；提醒同时使用文字和图标，而不只依赖颜色。</p>
+                    <hr>
+                    <p><strong>运维与质量：</strong>开发、预发布和生产环境；密钥不进入代码仓库；自动备份并记录恢复测试；通过 RUN 服务提供更新和支持。</p>
+
+                    <h2 class="h3 mt-4">成果</h2>
+                    <ul class="list-unstyled">
+                        <li class="py-2 border-bottom">明确 MVP 范围：11 个模块，其中 8 个为必需模块（访问、商品、库存变动、提醒、盘点、报表、审计日志和企业空间）</li>
+                        <li class="py-2 border-bottom">围绕 7 组界面梳理 5 个主要流程（收货、出库、盘点、补货和目录导入）</li>
+                        <li class="py-2 border-bottom">制定 11 项可验证的验收标准，包括企业数据隔离、可追溯更正、移动端使用和备份恢复</li>
+                        <li class="py-2 border-bottom">计划开展真实用户验证：在巴马科访谈 15 人，邀请 3 至 5 家试点企业，并以至少 80% 的日常操作通过工具录入为目标</li>
+                        <li class="py-2 border-bottom">加载时间、Lighthouse 得分、试点留存率和验收结果将在试点后测量</li>
+                    </ul>
+
+                    <p class="mt-4"><a class="btn btn-outline-nx btn-sm" href="../realisations.html">
+                            &lt; 返回项目案例</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="nx-footer">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="nx-brand" href="../index.html" aria-label="NexaWeb Mali，首页">
+                        <span class="nx-word">NexaWeb<small>MALI</small></span>
+                    </a>
+                    <p class="mt-3 mb-0">以敏捷、品质和数字战略，助力品牌持续成长。</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h2>导航</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../a-propos.html">关于我们</a></li>
+                        <li><a href="../services.html">服务</a></li>
+                        <li><a href="../realisations.html">项目案例</a></li>
+                        <li><a href="../contact.html">联系</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h2>服务</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="../services.html#build">BUILD</a></li>
+                        <li><a href="../services.html#advanced">ADVANCED</a></li>
+                        <li><a href="../services.html#run">RUN</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h2>联系</h2>
+                    <address class="mb-0">马里，巴马科<br><a
+                            href="mailto:bahaboubacrine1@gmail.com">bahaboubacrine1@gmail.com</a><br><a
+                            href="tel:+22382890992">+223 82 89 09 92</a><br><a
+                            href="https://wa.me/22382890992?text=Bonjour%20NexaWeb%20Mali%2C%20je%20souhaite%20un%20devis."
+                            target="_blank" rel="noopener noreferrer">WhatsApp</a></address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="small mb-0">© <span id="an">2026</span> NexaWeb Mali.
+                <a href="../mentions-legales.html">法律声明</a>和
+                <a href="../confidentialite.html">隐私政策</a>。
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/main.js" defer></script>
+</body>
+
+</html>
