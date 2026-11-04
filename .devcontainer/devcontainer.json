@@ -1,6 +1,6 @@
 {
 	"name": "NexaWeb Mali",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:24-bookworm",
 	"postCreateCommand": "npm ci",
 	"forwardPorts": [
 		5500
@@ -14,7 +14,9 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ritwickdey.LiveServer"
+				"ritwickdey.LiveServer",
+				"NikolaosGeorgiou.html-fmt-vscode",
+				"redhat.vscode-yaml"
 			]
 		}
 	}
