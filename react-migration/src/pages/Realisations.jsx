@@ -97,8 +97,21 @@ export default function Realisations({ lang = 'fr' }) {
                     <button type="button" className="btn-close" onClick={() => setPreview(null)} aria-label="Fermer"></button>
                   </div>
                   <div className="modal-body">
+                    {IMG_MAP[preview.slug] && (
+                      <div className="ratio mb-3" style={{ '--bs-aspect-ratio': '62.5%' }}>
+                        <img className="w-100 h-100 object-fit-cover rounded" src={`${BASE}${IMG_MAP[preview.slug]}`} alt={preview.title} />
+                      </div>
+                    )}
                     <p>{preview.desc}</p>
-                    <p>{preview.tags.join(', ')}</p>
+                    <div>
+                      <strong>Technologies :</strong>{' '}
+                      {preview.tags.map((t) => (
+                        <span key={t} className="badge text-bg-light border me-1">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-nx" onClick={() => setPreview(null)}>Fermer</button>
                   </div>
                 </div>
               </div>
