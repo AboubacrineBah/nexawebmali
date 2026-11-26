@@ -1,5 +1,7 @@
 import Layout from '../components/Layout.jsx';
 import { SERVICES } from '../data/services.js';
+import { PROJECTS } from '../data/projects.js';
+import { SITE } from '../data/site.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -76,7 +78,43 @@ export default function Home({ lang = 'fr' }) {
         <div className="container">
           <h2>Nos réalisations</h2>
           <p className="nx-muted mb-4">Un aperçu de notre travail.</p>
-          <a className="btn btn-nx" href="#/realisations">Voir toutes les réalisations</a>
+          <div className="row g-4">
+            {PROJECTS.slice(0, 3).map((p) => (
+              <div className="col-md-6 col-lg-4" key={p.slug}>
+                <article className="nx-card h-100 overflow-hidden">
+                  <div className="p-4">
+                    <span className="badge text-bg-primary mb-2">Projet de démonstration</span>
+                    <h3 className="h5">{p.title}</h3>
+                    <p>{p.desc}</p>
+                    <p>{p.tags.map((t) => <span key={t} className="badge text-bg-light border me-1">{t}</span>)}</p>
+                    <a href={`#/realisations/${p.slug}`} className="btn btn-sm btn-outline-nx">Lire l’étude de cas</a>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4">
+            <a className="btn btn-nx" href="#/realisations">Voir toutes les réalisations</a>
+          </div>
+        </div>
+      </section>
+      <section className="py-5">
+        <div className="container">
+          <h2>Contact</h2>
+          <p className="nx-muted mb-4">Parlons de votre projet.</p>
+          <div className="row g-4">
+            <div className="col-md-6">
+              <p>
+                <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+                <a href={`tel:${SITE.phone}`}>{SITE.phone}</a><br />
+                <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </p>
+              <p>{SITE.address}</p>
+            </div>
+            <div className="col-md-6">
+              <a className="btn btn-nx btn-lg" href="#/contact">Demander un devis</a>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
