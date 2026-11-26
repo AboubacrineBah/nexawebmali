@@ -106,6 +106,31 @@ export default function Realisations({ lang = 'fr' }) {
           )}
         </div>
       </section>
+      <section className="py-5 nx-alt">
+        <div className="container">
+          <div className="nx-card p-4 p-lg-5">
+            <div className="row g-4 align-items-center">
+              <div className="col-lg-7">
+                <h2>Parlons de votre projet</h2>
+                <p className="nx-muted">Un devis clair, un interlocuteur unique, des coûts annoncés à l'avance.</p>
+                <div className="d-flex flex-wrap gap-3 mt-3">
+                  <Link to="/contact" className="btn btn-nx btn-lg">Demander un devis</Link>
+                  <a className="btn btn-outline-nx btn-lg" href="https://wa.me/22382890992" target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-whatsapp me-2"></i>WhatsApp
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <ul className="list-unstyled mb-0">
+                  <li className="mb-2"><i className="bi bi-envelope me-2"></i><a href="mailto:aboubacrinebah@nexawebmali.com">aboubacrinebah@nexawebmali.com</a></li>
+                  <li className="mb-2"><i className="bi bi-telephone me-2"></i><a href="tel:+22382890992">+223 82 89 09 92</a></li>
+                  <li className="mb-2"><i className="bi bi-geo-alt me-2"></i>Bamako, Mali</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
