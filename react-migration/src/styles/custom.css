@@ -40,6 +40,8 @@ a { color: var(--nx-green-dark); }
 .nx-card { background: #fff; border: 1px solid #E3E7F0; border-radius: .75rem; transition: transform .2s, box-shadow .2s; }
 .nx-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(22, 33, 60, .1); }
 .nx-ico, .nx-num { width: 44px; height: 44px; border-radius: .6rem; background: rgba(62, 142, 99, .12); color: var(--nx-green-dark); display: grid; place-items: center; font-weight: 700; }
+.nx-portfolio-btn { transition: transform .2s ease, box-shadow .2s ease; }
+.nx-portfolio-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(22, 33, 60, .15); }
 .nx-footer { background: var(--nx-navy); color: #C5CCDD; }
 .nx-footer a { color: #fff; }
 .nx-footer h2 { font: 600 1rem Inter, "Segoe UI", Arial, sans-serif; color: #fff; }

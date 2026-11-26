@@ -64,7 +64,7 @@ export default function APropos({ lang = 'fr' }) {
             <div className="col-md-4 text-center">
               <img className="img-fluid rounded shadow" src={`${BASE}assets/images/AboubacrineBah1-1.jpg`} alt="M. BAH Aboubacrine — Fondateur et développeur web full-stack" />
               <div className="d-grid d-sm-flex gap-2 justify-content-center mt-3">
-                <a className="btn btn-outline-nx" href="https://aboubacrinebah.github.io/portfolio-aboubacrine-bah/" target="_blank" rel="noopener noreferrer">
+                <a className="btn btn-outline-nx nx-portfolio-btn" href="https://aboubacrinebah.github.io/portfolio-aboubacrine-bah/" target="_blank" rel="noopener noreferrer">
                   Découvrir mon portfolio <span className="ms-2" aria-hidden="true">→</span>
                 </a>
               </div>
