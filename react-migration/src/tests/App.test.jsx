@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App.jsx';
 
-test('App se rend sans erreur', () => {
+test('App se rend sans erreur', async () => {
   render(<App />);
-  expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { level: 1 })).toBeInTheDocument();
 });
