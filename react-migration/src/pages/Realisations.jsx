@@ -5,7 +5,7 @@ import { PROJECTS } from '../data/projects.js';
 
 const BASE = import.meta.env.BASE_URL;
 const CATS = ['all', 'wordpress', 'vitrine', 'ecommerce', 'react', 'gestion'];
-const PER_PAGE = 3;
+const PER_PAGE = 6;
 
 const IMG_MAP = {
   'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.png',
@@ -38,6 +38,7 @@ export default function Realisations({ lang = 'fr' }) {
         <div className="container">
           <ul className="list-group nx-muted mb-4">
             <li className="list-group-item">Les projets marqués <span className="badge text-bg-primary mb-2">Projet de démonstration</span> ont été conçus par NexaWeb Mali pour montrer notre méthode et notre niveau de finition.</li>
+            <li className="list-group-item">Les projets marqués <span className="badge text-bg-warning mb-2">Projet en production</span> sont des réalisations en cours de développement.</li>
           </ul>
           <div className="mb-3">
             {CATS.map((c) => (
