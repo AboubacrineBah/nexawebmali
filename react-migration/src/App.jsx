@@ -35,6 +35,10 @@ export default function App() {
       <Suspense fallback={<div className="container py-5">Chargement…</div>}>
         <Routes>
           <Route path="/" element={<Home lang="fr" />} />
+          <Route path="/a-propos" element={<APropos lang="fr" />} />
+          <Route path="/services" element={<Services lang="fr" />} />
+          <Route path="/realisations" element={<Realisations lang="fr" />} />
+          <Route path="/contact" element={<Contact lang="fr" />} />
           <Route path="/realisations/:slug" element={<ProjectDetail lang="fr" />} />
           <Route path="/:lang/realisations/:slug" element={<ProjectDetail />} />
           <Route path="/:lang/*" element={<Page />} />
