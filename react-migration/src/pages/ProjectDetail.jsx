@@ -29,6 +29,12 @@ export default function ProjectDetail({ lang }) {
               )}
               <h2>Étude de cas</h2>
               <p>{project.longDesc}</p>
+              {project.details && project.details.map((d) => (
+                <div key={d.title} className="mt-4">
+                  <h3 className="h4">{d.title}</h3>
+                  <p>{d.text}</p>
+                </div>
+              ))}
             </div>
             <div className="col-lg-5">
               <div className="nx-card p-4">
