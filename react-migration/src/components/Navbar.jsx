@@ -9,7 +9,18 @@ export default function Navbar({ lang = 'fr' }) {
   return (
     <nav className="navbar navbar-expand-lg fixed-top nx-navbar" data-bs-theme="dark" aria-label="Navigation principale">
       <div className="container">
-        <Link className="navbar-brand" to={`/${lang === 'fr' ? '' : lang + '/'}`}>NexaWeb Mali</Link>
+        <Link className="nx-brand" to={`/${lang === 'fr' ? '' : lang + '/'}`} aria-label="NexaWeb Mali, accueil">
+          <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 40 40' aria-hidden='true'>
+            <rect x='.5' y='.5' width='39' height='39' rx='9' fill='#16213C' stroke='#fff' stroke-opacity='.3' />
+            <path d='M11 30V10l18 20V10' fill='none' stroke='#fff' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round' />
+            <circle cx='11' cy='10' r='3' fill='#C99A2E' />
+            <circle cx='29' cy='10' r='3' fill='#C99A2E' />
+            <circle cx='11' cy='30' r='3' fill='#3E8E63' />
+            <circle cx='29' cy='30' r='3' fill='#3E8E63' />
+            <circle cx='20' cy='20' r='3' fill='#3E8E63' />
+          </svg>
+          <span className="nx-word">NexaWeb<small>MALI</small></span>
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu">
           <span className="navbar-toggler-icon"></span>
         </button>
