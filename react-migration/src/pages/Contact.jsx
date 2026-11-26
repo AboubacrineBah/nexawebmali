@@ -44,8 +44,15 @@ export default function Contact({ lang = 'fr' }) {
 
   return (
     <Layout lang={lang}>
+      <section className="nx-dark nx-hero py-5">
+        <div className="container py-lg-5">
+          <h1>Contact & devis</h1>
+          <p className="lead nx-muted">Parlons de votre projet.</p>
+        </div>
+      </section>
       <div className="container py-5">
-        <h1>Contact & devis</h1>
+        <div className="row g-4">
+          <div className="col-lg-7">
         {!sent ? (
           <form onSubmit={onSubmit} className="mt-4" noValidate>
             <input type="text" name="website" value={form.website} onChange={onChange} style={{ display: 'none' }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
@@ -90,8 +97,8 @@ export default function Contact({ lang = 'fr' }) {
             </div>
             <div className="d-flex gap-2">
               {step > 0 && <button type="button" className="btn btn-secondary" onClick={back}>Retour</button>}
-              {step < STEPS.length - 1 && <button type="button" className="btn btn-primary" onClick={next}>Suivant</button>}
-              {step === STEPS.length - 1 && <button type="submit" className="btn btn-primary">Envoyer la demande</button>}
+              {step < STEPS.length - 1 && <button type="button" className="btn btn-nx" onClick={next}>Suivant</button>}
+              {step === STEPS.length - 1 && <button type="submit" className="btn btn-nx">Envoyer la demande</button>}
             </div>
           </form>
         ) : (
@@ -102,14 +109,18 @@ export default function Contact({ lang = 'fr' }) {
             </a>
           </div>
         )}
-        <div className="mt-5">
-          <h2>Coordonnées</h2>
-          <p>
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
-            <a href={`tel:${SITE.phone}`}>{SITE.phone}</a><br />
-            <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp</a><br />
-            {SITE.address}
-          </p>
+          </div>
+          <div className="col-lg-5">
+            <div className="nx-card p-4">
+              <h2>Coordonnées</h2>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-2"><i className="bi bi-envelope me-2"></i><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+                <li className="mb-2"><i className="bi bi-telephone me-2"></i><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>
+                <li className="mb-2"><i className="bi bi-whatsapp me-2"></i><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                <li className="mb-2"><i className="bi bi-geo-alt me-2"></i>{SITE.address}</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
