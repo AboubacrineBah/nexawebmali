@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { PROJECTS } from '../data/projects.js';
 
@@ -35,6 +35,23 @@ export default function ProjectDetail({ lang }) {
                   <p>{d.text}</p>
                 </div>
               ))}
+              {project.gallery && project.gallery.length > 0 && (
+                <div className="mt-4">
+                  <h3 className="h4">Galerie</h3>
+                  <div className="row g-3">
+                    {project.gallery.map((img, i) => (
+                      <div className="col-md-6" key={i}>
+                        <div className="ratio" style={{ '--bs-aspect-ratio': '62.5%' }}>
+                          <img className="w-100 h-100 object-fit-cover rounded" src={`${BASE}${img}`} alt={`${project.title} ${i + 1}`} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div className="mt-4">
+                <Link to="/realisations" className="btn btn-nx">← Retour aux réalisations</Link>
+              </div>
             </div>
             <div className="col-lg-5">
               <div className="nx-card p-4">
