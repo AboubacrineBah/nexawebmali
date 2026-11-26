@@ -31,7 +31,7 @@ jobs:
       - run: npm run test:run
       - run: npm run build
         env:
-          VITE_BASE_PATH: /nexawebmali/
+          VITE_BASE_PATH: ./
       - uses: actions/upload-pages-artifact@v3
         with:
           path: react-migration/dist
