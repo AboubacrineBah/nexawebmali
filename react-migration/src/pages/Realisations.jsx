@@ -75,15 +75,15 @@ export default function Realisations({ lang = 'fr' }) {
             <nav className="mt-4" aria-label="Pagination">
               <ul className="pagination">
                 <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                  <button className="page-link" onClick={() => setPage((p) => Math.max(1, p - 1))}>Précédent</button>
+                  <button className="page-link btn-outline-nx" onClick={() => setPage((p) => Math.max(1, p - 1))}>Précédent</button>
                 </li>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
                   <li key={n} className={`page-item ${n === currentPage ? 'active' : ''}`}>
-                    <button className="page-link" onClick={() => setPage(n)}>{n}</button>
+                    <button className={`page-link ${n === currentPage ? 'btn-nx' : 'btn-outline-nx'}`} onClick={() => setPage(n)}>{n}</button>
                   </li>
                 ))}
                 <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-                  <button className="page-link" onClick={() => setPage((p) => Math.min(totalPages, p + 1))}>Suivant</button>
+                  <button className="page-link btn-outline-nx" onClick={() => setPage((p) => Math.min(totalPages, p + 1))}>Suivant</button>
                 </li>
               </ul>
             </nav>
