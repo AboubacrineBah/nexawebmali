@@ -79,40 +79,59 @@ export default function Home({ lang = 'fr' }) {
           <h2>Nos réalisations</h2>
           <p className="nx-muted mb-4">Un aperçu de notre travail.</p>
           <div className="row g-4">
-            {PROJECTS.slice(0, 3).map((p) => (
-              <div className="col-md-6 col-lg-4" key={p.slug}>
-                <article className="nx-card h-100 overflow-hidden">
-                  <div className="p-4">
-                    <span className="badge text-bg-primary mb-2">Projet de démonstration</span>
-                    <h3 className="h5">{p.title}</h3>
-                    <p>{p.desc}</p>
-                    <p>{p.tags.map((t) => <span key={t} className="badge text-bg-light border me-1">{t}</span>)}</p>
-                    <a href={`#/realisations/${p.slug}`} className="btn btn-sm btn-outline-nx">Lire l’étude de cas</a>
-                  </div>
-                </article>
-              </div>
-            ))}
+            {PROJECTS.slice(0, 3).map((p) => {
+              const imgMap = {
+                'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.png',
+                'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.jpeg",
+                'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.png',
+              };
+              const img = imgMap[p.slug];
+              return (
+                <div className="col-md-6 col-lg-4" key={p.slug}>
+                  <article className="nx-card h-100 overflow-hidden">
+                    {img && (
+                      <div className="ratio" style={{ '--bs-aspect-ratio': '62.5%' }}>
+                        <img className="w-100 h-100 object-fit-cover" src={`${BASE}${img}`} alt={p.title} />
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <span className="badge text-bg-primary mb-2">Projet de démonstration</span>
+                      <h3 className="h5">{p.title}</h3>
+                      <p>{p.desc}</p>
+                      <p>{p.tags.map((t) => <span key={t} className="badge text-bg-light border me-1">{t}</span>)}</p>
+                      <a href={`#/realisations/${p.slug}`} className="btn btn-sm btn-outline-nx">Lire l’étude de cas</a>
+                    </div>
+                  </article>
+                </div>
+              );
+            })}
           </div>
           <div className="mt-4">
             <a className="btn btn-nx" href="#/realisations">Voir toutes les réalisations</a>
           </div>
         </div>
       </section>
-      <section className="py-5">
+      <section className="py-5 nx-alt">
         <div className="container">
-          <h2>Contact</h2>
-          <p className="nx-muted mb-4">Parlons de votre projet.</p>
-          <div className="row g-4">
-            <div className="col-md-6">
-              <p>
-                <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
-                <a href={`tel:${SITE.phone}`}>{SITE.phone}</a><br />
-                <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              </p>
-              <p>{SITE.address}</p>
-            </div>
-            <div className="col-md-6">
-              <a className="btn btn-nx btn-lg" href="#/contact">Demander un devis</a>
+          <div className="nx-card p-4 p-lg-5">
+            <div className="row g-4 align-items-center">
+              <div className="col-lg-7">
+                <h2>Parlons de votre projet</h2>
+                <p className="nx-muted">Un devis clair, un interlocuteur unique, des coûts annoncés à l'avance.</p>
+                <div className="d-flex flex-wrap gap-3 mt-3">
+                  <a className="btn btn-nx btn-lg" href="#/contact">Demander un devis</a>
+                  <a className="btn btn-outline-nx btn-lg" href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-whatsapp me-2"></i>WhatsApp
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <ul className="list-unstyled mb-0">
+                  <li className="mb-2"><i className="bi bi-envelope me-2"></i><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+                  <li className="mb-2"><i className="bi bi-telephone me-2"></i><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>
+                  <li className="mb-2"><i className="bi bi-geo-alt me-2"></i>{SITE.address}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
