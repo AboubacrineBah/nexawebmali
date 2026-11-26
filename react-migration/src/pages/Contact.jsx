@@ -78,6 +78,10 @@ export default function Contact({ lang = 'fr' }) {
                 <label className="form-label" htmlFor="delai">Délai souhaité</label>
                 <input id="delai" name="delai" className="form-control" value={form.delai} onChange={onChange} />
               </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="budget">Budget indicatif</label>
+                <input id="budget" name="budget" className="form-control" value={form.budget} onChange={onChange} placeholder="À discuter" />
+              </div>
             </div>
             <div hidden={step !== 2}>
               <div className="mb-3">
@@ -93,6 +97,10 @@ export default function Contact({ lang = 'fr' }) {
               <div className="mb-3">
                 <label className="form-label" htmlFor="tel">Téléphone / WhatsApp</label>
                 <input id="tel" name="tel" className="form-control" value={form.tel} onChange={onChange} />
+              </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="entreprise">Entreprise / organisation</label>
+                <input id="entreprise" name="entreprise" className="form-control" value={form.entreprise} onChange={onChange} />
               </div>
             </div>
             <div className="d-flex gap-2">
