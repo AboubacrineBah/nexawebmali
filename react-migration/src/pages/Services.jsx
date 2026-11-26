@@ -3,6 +3,12 @@ import Layout from '../components/Layout.jsx';
 export default function Services({ lang = 'fr' }) {
   return (
     <Layout lang={lang}>
+      <section className="nx-dark nx-hero py-5">
+        <div className="container py-lg-5">
+          <h1>Services</h1>
+          <p className="lead nx-muted">Trois pôles, une même exigence de qualité. De la création à la maintenance.</p>
+        </div>
+      </section>
       <section className="py-5">
         <div className="container">
           <div className="row g-4 mb-5" id="build">
