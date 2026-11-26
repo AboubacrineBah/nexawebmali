@@ -64,7 +64,7 @@ export default function Realisations({ lang = 'fr' }) {
                       <p>{p.desc}</p>
                       <p>{p.tags.map((t) => <span key={t} className="badge text-bg-light border me-1">{t}</span>)}</p>
                       <Link to={`${prefix}/realisations/${p.slug}`} className="btn btn-sm btn-outline-nx">Lire l’étude de cas</Link>
-                      <button type="button" className="btn btn-sm btn-outline-secondary ms-2" onClick={() => setPreview(p)}>Aperçu</button>
+                      <button type="button" className="btn btn-sm btn-outline-nx ms-2" onClick={() => setPreview(p)}>Aperçu</button>
                     </div>
                   </article>
                 </div>
