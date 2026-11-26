@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { PROJECTS } from '../data/projects.js';
@@ -10,6 +11,8 @@ export default function ProjectDetail({ lang }) {
   const slug = params.slug;
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return <Navigate to="/" replace />;
+  const [slide, setSlide] = useState(0);
+  const gallery = project.gallery || [];
   return (
     <Layout lang={l}>
       <section className="nx-dark nx-hero py-5">
@@ -35,16 +38,35 @@ export default function ProjectDetail({ lang }) {
                   <p>{d.text}</p>
                 </div>
               ))}
-              {project.gallery && project.gallery.length > 0 && (
+              {gallery.length > 0 && (
                 <div className="mt-4">
                   <h3 className="h4">Galerie</h3>
-                  <div className="row g-3">
-                    {project.gallery.map((img, i) => (
-                      <div className="col-md-6" key={i}>
-                        <div className="ratio" style={{ '--bs-aspect-ratio': '62.5%' }}>
-                          <img className="w-100 h-100 object-fit-cover rounded" src={`${BASE}${img}`} alt={`${project.title} ${i + 1}`} />
+                  <div id="gal" className="carousel slide" data-bs-interval="false">
+                    <div className="carousel-inner">
+                      {gallery.map((img, i) => (
+                        <div key={i} className={`carousel-item ${i === slide ? 'active' : ''}`}>
+                          <div className="ratio nx-shot rounded-4" style={{ '--bs-aspect-ratio': '62.5%' }}>
+                            <img className="w-100 h-100 object-fit-contain" src={`${BASE}${img}`} alt={`${project.title} ${i + 1}`} />
+                          </div>
                         </div>
-                      </div>
+                      ))}
+                    </div>
+                    {gallery.length > 1 && (
+                      <>
+                        <button className="carousel-control-prev" type="button" onClick={() => setSlide((s) => (s - 1 + gallery.length) % gallery.length)}>
+                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Précédent</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" onClick={() => setSlide((s) => (s + 1) % gallery.length)}>
+                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Suivant</span>
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  <div className="d-flex justify-content-center gap-2 mt-2">
+                    {gallery.map((_, i) => (
+                      <button key={i} type="button" className={`btn btn-sm ${i === slide ? 'btn-nx' : 'btn-outline-nx'}`} onClick={() => setSlide(i)}>{i + 1}</button>
                     ))}
                   </div>
                 </div>
