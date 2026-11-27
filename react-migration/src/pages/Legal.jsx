@@ -3,12 +3,18 @@ import Layout from '../components/Layout.jsx';
 export default function Legal({ lang = 'fr', type = 'mentions' }) {
   return (
     <Layout lang={lang}>
+      <section className="nx-dark nx-hero py-5">
+        <div className="container py-lg-5">
+          <h1>{type === 'mentions' ? 'Mentions légales' : 'Confidentialité'}</h1>
+        </div>
+      </section>
       <section className="py-5">
         <div className="container">
           <div className="col-lg-8">
+            <div className="nx-card p-4 p-lg-5">
             {type === 'mentions' ? (
               <>
-                <h1>Mentions légales</h1>
+                <h2 className="h3">Mentions légales</h2>
                 <h2 className="h4 mt-4" id="editeur">Éditeur</h2>
                 <p>NexaWeb Mali, M. BAH Aboubacrine, Bamako, Mali.</p>
                 <h2 className="h4 mt-4" id="hebergeur">Hébergeur</h2>
@@ -24,7 +30,7 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
               </>
             ) : (
               <>
-                <h1>Confidentialité</h1>
+                <h2 className="h3">Confidentialité</h2>
                 <h2 className="h4 mt-4">Données collectées</h2>
                 <p>Le formulaire de devis collecte votre nom, e-mail, téléphone/WhatsApp, type de projet, délai, budget et description. Ces données sont utilisées uniquement pour répondre à votre demande.</p>
                 <h2 className="h4 mt-4">Usage et conservation</h2>
@@ -35,6 +41,7 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
                 <p>Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au fonctionnement peuvent être déposés.</p>
               </>
             )}
+            </div>
           </div>
         </div>
       </section>
