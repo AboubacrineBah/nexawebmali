@@ -27,7 +27,7 @@ export default function ProjectDetail({ lang }) {
             <div className="col-lg-7">
               {project.image && (
                 <div className="ratio mb-4" style={{ '--bs-aspect-ratio': '62.5%' }}>
-                  <img className="w-100 h-100 object-fit-cover rounded" src={`${BASE}${project.image}`} alt={project.title} />
+                  <img className="w-100 h-100 object-fit-cover rounded" src={`${BASE}${project.image}`} alt={project.title} loading="lazy" />
                 </div>
               )}
               <h2>Étude de cas</h2>
@@ -46,7 +46,7 @@ export default function ProjectDetail({ lang }) {
                       {gallery.map((img, i) => (
                         <div key={i} className={`carousel-item ${i === slide ? 'active' : ''}`}>
                           <div className="ratio nx-shot rounded-4" style={{ '--bs-aspect-ratio': '62.5%' }}>
-                            <img className="w-100 h-100 object-fit-contain" src={`${BASE}${img}`} alt={`${project.title} ${i + 1}`} />
+                            <img className="w-100 h-100 object-fit-contain" src={`${BASE}${img}`} alt={`${project.title} ${i + 1}`} loading="lazy" />
                           </div>
                         </div>
                       ))}

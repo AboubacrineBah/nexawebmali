@@ -55,7 +55,7 @@ export default function Realisations({ lang = 'fr' }) {
                   <article className="nx-card h-100 overflow-hidden">
                     {img && (
                       <div className="ratio" style={{ '--bs-aspect-ratio': '62.5%' }}>
-                        <img className="w-100 h-100 object-fit-cover" src={`${BASE}${img}`} alt={p.title} />
+                        <img className="w-100 h-100 object-fit-cover" src={`${BASE}${img}`} alt={p.title} loading="lazy" />
                       </div>
                     )}
                     <div className="p-4">
