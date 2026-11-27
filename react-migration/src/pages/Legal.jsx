@@ -25,7 +25,14 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
             ) : (
               <>
                 <h1>Confidentialité</h1>
-                <p>Politique de confidentialité à compléter (données collectées via le formulaire de devis, usage, conservation, droits).</p>
+                <h2 className="h4 mt-4">Données collectées</h2>
+                <p>Le formulaire de devis collecte votre nom, e-mail, téléphone/WhatsApp, type de projet, délai, budget et description. Ces données sont utilisées uniquement pour répondre à votre demande.</p>
+                <h2 className="h4 mt-4">Usage et conservation</h2>
+                <p>Les données sont conservées le temps nécessaire au traitement de votre demande et à la relation commerciale. Elles ne sont pas vendues ni partagées avec des tiers.</p>
+                <h2 className="h4 mt-4">Vos droits</h2>
+                <p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à aboubacrinebah@nexawebmali.com.</p>
+                <h2 className="h4 mt-4">Cookies</h2>
+                <p>Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au fonctionnement peuvent être déposés.</p>
               </>
             )}
           </div>

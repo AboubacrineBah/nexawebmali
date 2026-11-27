@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout.jsx';
 import { SERVICES } from '../data/services.js';
 import { PROJECTS } from '../data/projects.js';
@@ -6,13 +7,14 @@ import { SITE } from '../data/site.js';
 const BASE = import.meta.env.BASE_URL;
 
 export default function Home({ lang = 'fr' }) {
+  const { t } = useTranslation();
   return (
     <Layout lang={lang}>
       <section className="nx-dark nx-hero py-5">
         <div className="container py-lg-5">
           <div className="col-lg-7">
             <h3>Développeur web · Bamako, Mali</h3>
-            <h1>Le digital malien, pensé pour le monde.</h1>
+            <h1>{t('home.hero')}</h1>
             <p className="lead nx-muted my-4">
               Sites WordPress, boutiques en ligne et applications React : des solutions web robustes,
               esthétiques et évolutives pour les entreprises, entrepreneurs et organisations.
