@@ -8,3 +8,5 @@ export const SITE = {
 
 export const whatsappLink = (message) =>
   `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
+
+import.meta.env.VITE_WHATSAPP_NUMBER || '22382890992'
