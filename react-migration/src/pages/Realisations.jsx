@@ -51,7 +51,7 @@ export default function Realisations({ lang = 'fr' }) {
           </div>
           <div className="row g-4">
             {list.map((p) => {
-              const img = IMG_MAP[p.slug];
+              const img = p.image || IMG_MAP[p.slug];
               return (
                 <div className="col-md-6 col-lg-4" key={p.slug} data-cat={p.category}>
                   <article className="nx-card h-100 overflow-hidden">

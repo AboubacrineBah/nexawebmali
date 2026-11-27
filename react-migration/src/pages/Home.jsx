@@ -87,7 +87,7 @@ export default function Home({ lang = 'fr' }) {
                 'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.webp",
                 'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.webp',
               };
-              const img = imgMap[p.slug];
+              const img = imgMap[p.slug] || p.image;
               return (
                 <div className="col-md-6 col-lg-4" key={p.slug}>
                   <article className="nx-card h-100 overflow-hidden">
