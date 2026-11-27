@@ -36,6 +36,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home lang="fr" />} />
           <Route path="/a-propos" element={<APropos lang="fr" />} />
+          <Route path="/mentions-legales" element={<Legal lang="fr" type="mentions" />} />
+          <Route path="/confidentialite" element={<Legal lang="fr" type="confidentialite" />} />
           <Route path="/services" element={<Services lang="fr" />} />
           <Route path="/realisations" element={<Realisations lang="fr" />} />
           <Route path="/contact" element={<Contact lang="fr" />} />
