@@ -10,8 +10,9 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
       </section>
       <section className="py-5">
         <div className="container">
-          <div className="col-lg-8">
-            <div className="nx-card p-4 p-lg-5">
+          <div className="row g-4">
+            <div className="col-lg-8">
+              <div className="nx-card p-4 p-lg-5">
             {type === 'mentions' ? (
               <>
                 <h2 className="h3">Mentions légales</h2>
@@ -43,6 +44,14 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
             )}
             </div>
           </div>
+          <div className="col-lg-4">
+            <div className="nx-card p-4">
+              <h3 className="h5">Stack technologique</h3>
+              <p>React, Vite, Bootstrap 5, JavaScript (ES6+), Vitest, React Router, i18next, Sass.</p>
+              <p className="small text-muted mb-0">Hébergement : GitHub Pages.</p>
+            </div>
+          </div>
+        </div>
         </div>
       </section>
     </Layout>
