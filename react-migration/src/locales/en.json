@@ -1,4 +1,6 @@
 {
-  "nav": { "services": "Services", "realisations": "Portfolio", "contact": "Contact", "devis": "Quote" },
-  "home": { "hero": "Malian digital, built for the world." }
+  "nav": { "services": "Services", "realisations": "Portfolio", "contact": "Contact", "devis": "Quote", "apropos": "About" },
+  "home": { "hero": "Malian digital, built for the world.", "realisations": "Our work", "contact": "Let's talk about your project" },
+  "services": { "title": "Services", "subtitle": "Three pillars, one quality standard." },
+  "realisations": { "title": "Our work", "subtitle": "A glimpse of what we do." }
 }

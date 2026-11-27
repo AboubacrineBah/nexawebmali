@@ -1,1 +1,1 @@
-{ "nav": { "services": "服务", "realisations": "作品", "contact": "联系", "devis": "报价" }, "home": { "hero": "面向世界的马里数字。" } }
+{ "nav": { "services": "服务", "realisations": "作品", "contact": "联系", "devis": "报价", "apropos": "关于" }, "home": { "hero": "面向世界的马里数字。", "realisations": "我们的作品", "contact": "谈谈您的项目" }, "services": { "title": "服务", "subtitle": "三大支柱，同一品质。" }, "realisations": { "title": "我们的作品", "subtitle": "我们工作的缩影。" } }

@@ -1,4 +1,6 @@
 {
-  "nav": { "services": "Services", "realisations": "Réalisations", "contact": "Contact", "devis": "Devis" },
-  "home": { "hero": "Le digital malien, pensé pour le monde." }
+  "nav": { "services": "Services", "realisations": "Réalisations", "contact": "Contact", "devis": "Devis", "apropos": "À propos" },
+  "home": { "hero": "Le digital malien, pensé pour le monde.", "realisations": "Nos réalisations", "contact": "Parlons de votre projet" },
+  "services": { "title": "Services", "subtitle": "Trois pôles, une même exigence de qualité." },
+  "realisations": { "title": "Nos réalisations", "subtitle": "Un aperçu de notre travail." }
 }

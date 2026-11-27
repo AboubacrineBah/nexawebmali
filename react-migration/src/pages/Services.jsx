@@ -1,12 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout.jsx';
 
 export default function Services({ lang = 'fr' }) {
+  const { t } = useTranslation();
   return (
     <Layout lang={lang}>
       <section className="nx-dark nx-hero py-5">
         <div className="container py-lg-5">
-          <h1>Services</h1>
-          <p className="lead nx-muted">Trois pôles, une même exigence de qualité. De la création à la maintenance.</p>
+          <h1>{t('services.title')}</h1>
+          <p className="lead nx-muted">{t('services.subtitle')}</p>
         </div>
       </section>
       <section className="py-5">

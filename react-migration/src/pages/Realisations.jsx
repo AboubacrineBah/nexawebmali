@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { PROJECTS } from '../data/projects.js';
@@ -17,6 +18,7 @@ const IMG_MAP = {
 };
 
 export default function Realisations({ lang = 'fr' }) {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
   const [preview, setPreview] = useState(null);
@@ -30,8 +32,8 @@ export default function Realisations({ lang = 'fr' }) {
     <Layout lang={lang}>
       <section className="nx-dark nx-hero py-5">
         <div className="container py-lg-5">
-          <h1>Nos réalisations</h1>
-          <p className="lead nx-muted">Un aperçu de notre travail.</p>
+          <h1>{t('realisations.title')}</h1>
+          <p className="lead nx-muted">{t('realisations.subtitle')}</p>
         </div>
       </section>
       <section className="py-5 nx-alt">
