@@ -8,12 +8,12 @@ const CATS = ['all', 'wordpress', 'vitrine', 'ecommerce', 'react', 'gestion'];
 const PER_PAGE = 6;
 
 const IMG_MAP = {
-  'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.png',
-  'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.jpeg",
-  'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.png',
-  'association-jigi': 'assets/images/jigi-dons/desktop/1 · Tableau de bord (desktop)@1x.png',
-  'nexastock': 'assets/images/nexastock/dashboard.png',
-  'nexagestion': 'assets/images/nexagestion/tableau-de-bord.png',
+  'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.webp',
+  'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.webp",
+  'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.webp',
+  'association-jigi': 'assets/images/jigi-dons/desktop/1 · Tableau de bord (desktop)@1x.webp',
+  'nexastock': 'assets/images/nexastock/dashboard.webp',
+  'nexagestion': 'assets/images/nexagestion/tableau-de-bord.webp',
 };
 
 export default function Realisations({ lang = 'fr' }) {

@@ -83,9 +83,9 @@ export default function Home({ lang = 'fr' }) {
           <div className="row g-4">
             {PROJECTS.slice(0, 3).map((p) => {
               const imgMap = {
-                'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.png',
-                'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.jpeg",
-                'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.png',
+                'nexaweb-mali-wordpress': 'assets/images/nexaweb-mali-wordpress/NexaWeb Mali.webp',
+                'nexaweb-mali-bootstrap': "assets/images/nexaweb-mali-bootstrap/Page d'acceuil section hero.webp",
+                'afrique-artisanat': 'assets/images/afrique-artisanat/public/accueil.webp',
               };
               const img = imgMap[p.slug];
               return (
