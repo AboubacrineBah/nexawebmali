@@ -1,0 +1,70 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 3603 >> stream
+BT /F1 10 Tf 50 750 Td (Analyse comparative : Netlify vs Vercel \(hebergement gratuit\)) Tj ET
+BT /F1 10 Tf 50 736 Td () Tj ET
+BT /F1 10 Tf 50 722 Td (Date: 27 novembre 2026) Tj ET
+BT /F1 10 Tf 50 708 Td (Projet: NexaWeb Mali) Tj ET
+BT /F1 10 Tf 50 694 Td () Tj ET
+BT /F1 10 Tf 50 680 Td (1. Contexte) Tj ET
+BT /F1 10 Tf 50 666 Td (Le site NexaWeb Mali est actuellement heberge sur GitHub Pages \(statique\).) Tj ET
+BT /F1 10 Tf 50 652 Td (Limites observees : pas de controle des headers HTTP \(cache TTL, CSP\),) Tj ET
+BT /F1 10 Tf 50 638 Td (pas de redirections serveur, pas de fonctions serverless natives.) Tj ET
+BT /F1 10 Tf 50 624 Td (Netlify et Vercel proposent des offres gratuites avec plus de controle.) Tj ET
+BT /F1 10 Tf 50 610 Td () Tj ET
+BT /F1 10 Tf 50 596 Td (2. Tableau comparatif) Tj ET
+BT /F1 10 Tf 50 582 Td (Critere | Netlify \(gratuit\) | Vercel \(gratuit\)) Tj ET
+BT /F1 10 Tf 50 568 Td (Build minutes/mois | 300 | 6000 \(Hobby\)) Tj ET
+BT /F1 10 Tf 50 554 Td (Bande passante | 100 GB | 100 GB) Tj ET
+BT /F1 10 Tf 50 540 Td (Deploiements | Illimites | Illimites) Tj ET
+BT /F1 10 Tf 50 526 Td (Domaine personnalise | Oui \(HTTPS auto\) | Oui \(HTTPS auto\)) Tj ET
+BT /F1 10 Tf 50 512 Td (Headers HTTP custom | Oui \(_headers\) | Oui \(vercel.json\)) Tj ET
+BT /F1 10 Tf 50 498 Td (Redirections | Oui \(_redirects\) | Oui \(vercel.json\)) Tj ET
+BT /F1 10 Tf 50 484 Td (Fonctions serverless | Netlify Functions | Vercel Serverless/Edge) Tj ET
+BT /F1 10 Tf 50 470 Td (Support SPA | Oui | Oui) Tj ET
+BT /F1 10 Tf 50 456 Td (Preview deploys \(PR\) | Oui | Oui) Tj ET
+BT /F1 10 Tf 50 442 Td (Forms integres | Oui \(Netlify Forms\) | Non) Tj ET
+BT /F1 10 Tf 50 428 Td () Tj ET
+BT /F1 10 Tf 50 414 Td (3. Points forts Netlify) Tj ET
+BT /F1 10 Tf 50 400 Td (- Netlify Forms : capture de formulaires sans backend.) Tj ET
+BT /F1 10 Tf 50 386 Td (- Configuration simple via _headers et _redirects.) Tj ET
+BT /F1 10 Tf 50 372 Td (- Bonne documentation, interface intuitive.) Tj ET
+BT /F1 10 Tf 50 358 Td (- Build minutes suffisants pour un site vitrine \(300 min/mois\).) Tj ET
+BT /F1 10 Tf 50 344 Td () Tj ET
+BT /F1 10 Tf 50 330 Td (4. Points forts Vercel) Tj ET
+BT /F1 10 Tf 50 316 Td (- 6000 min de build par mois \(largement superieur\).) Tj ET
+BT /F1 10 Tf 50 302 Td (- Edge Functions ultra-rapides.) Tj ET
+BT /F1 10 Tf 50 288 Td (- Integration native avec Next.js \(si migration future\).) Tj ET
+BT /F1 10 Tf 50 274 Td (- Performance Lighthouse generalement excellente.) Tj ET
+BT /F1 10 Tf 50 260 Td () Tj ET
+BT /F1 10 Tf 50 246 Td (5. Recommandation pour NexaWeb Mali) Tj ET
+BT /F1 10 Tf 50 232 Td (Recommandation: Netlify pour le court terme \(Forms + simplicite\),) Tj ET
+BT /F1 10 Tf 50 218 Td (Vercel si besoin de fonctions Edge ou migration vers Next.js.) Tj ET
+BT /F1 10 Tf 50 204 Td () Tj ET
+BT /F1 10 Tf 50 190 Td (Migration depuis GitHub Pages:) Tj ET
+BT /F1 10 Tf 50 176 Td (- Changer base dans vite.config.js en '/' \(domaine personnalise\).) Tj ET
+BT /F1 10 Tf 50 162 Td (- Ajouter _headers pour cache TTL long et CSP.) Tj ET
+BT /F1 10 Tf 50 148 Td (- Ajouter _redirects pour SPA fallback.) Tj ET
+BT /F1 10 Tf 50 134 Td (- Configurer le domaine nexawebmali.com dans le dashboard.) Tj ET
+BT /F1 10 Tf 50 120 Td () Tj ET
+BT /F1 10 Tf 50 106 Td (6. Conclusion) Tj ET
+BT /F1 10 Tf 50 92 Td (Les deux sont excellents et gratuits. Netlify est ideal pour un site vitrine) Tj ET
+BT /F1 10 Tf 50 78 Td (avec formulaire \(Forms\). Vercel est ideal pour la performance et les fonctions.) Tj ET
+BT /F1 10 Tf 50 64 Td (Le choix depend des besoins futurs \(email, formulaires, API\).) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000266 00000 n 
+0000000348 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+3971
+%%EOF
