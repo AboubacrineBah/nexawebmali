@@ -14,7 +14,7 @@ export default function Legal({ lang = 'fr', type = 'mentions' }) {
                 <h2 className="h4 mt-4" id="hebergeur">Hébergeur</h2>
                 <p>GitHub Pages</p>
                 <h2 className="h4 mt-4" id="lien">Lien du site web</h2>
-                <p><a className="link-primary" href="https://aboubacrinebah.github.io/nexawebmali/">aboubacrinebah.github.io/nexawebmali/</a></p>
+                <p><a className="link-primary" href="https://www.nexawebmali.com">www.nexawebmali.com</a></p>
                 <h2 className="h4 mt-4" id="propriete">Propriété intellectuelle</h2>
                 <p>Les textes, visuels, logos et le code de ce site sont la propriété de NexaWeb Mali, sauf mention contraire. Toute reproduction sans autorisation écrite est interdite. Les projets présentés dans la page Réalisations appartiennent à leurs propriétaires respectifs et sont montrés avec leur accord.</p>
                 <h2 className="h4 mt-4" id="responsabilite">Responsabilité</h2>
