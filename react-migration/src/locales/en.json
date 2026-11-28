@@ -2,5 +2,7 @@
   "nav": { "services": "Services", "realisations": "Portfolio", "contact": "Contact", "devis": "Quote", "apropos": "About" },
   "home": { "hero": "Malian digital, built for the world.", "realisations": "Our work", "contact": "Let's talk about your project" },
   "services": { "title": "Services", "subtitle": "Three pillars, one quality standard." },
-  "realisations": { "title": "Our work", "subtitle": "A glimpse of what we do." }
+  "realisations": { "title": "Our work", "subtitle": "A glimpse of what we do." },
+  "apropos": { "title": "About", "subtitle": "A web studio born in Bamako, built for the world." },
+  "contact": { "title": "Contact & quote", "subtitle": "Let's talk about your project." }
 }

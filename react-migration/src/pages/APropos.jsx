@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout.jsx';
 const BASE = import.meta.env.BASE_URL;
 
 export default function APropos({ lang = 'fr' }) {
+  const { t } = useTranslation();
   return (
     <Layout lang={lang}>
       <section className="nx-dark py-5">
         <div className="container py-lg-4">
           <div className="col-lg-8">
-            <h1>Un studio web né à Bamako, pensé pour le monde</h1>
+            <h1>{t('apropos.title')}</h1>
             <p className="lead nx-muted mt-3 mb-0">
               NexaWeb Mali conçoit des sites, des applications et des solutions digitales modernes pour les entreprises, entrepreneurs et organisations.
             </p>

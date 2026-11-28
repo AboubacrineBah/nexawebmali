@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout.jsx';
 import { SITE, whatsappLink } from '../data/site.js';
 
 const STEPS = ['Votre projet', 'Votre besoin', 'Vos coordonnées'];
 
 export default function Contact({ lang = 'fr' }) {
+  const { t } = useTranslation();
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({ nom: '', email: '', tel: '', type: '', delai: '', budget: '', message: '', entreprise: '', website: '' });
   const [sent, setSent] = useState(false);
@@ -46,7 +48,7 @@ export default function Contact({ lang = 'fr' }) {
     <Layout lang={lang}>
       <section className="nx-dark nx-hero py-5">
         <div className="container py-lg-5">
-          <h1>Contact & devis</h1>
+          <h1>{t('contact.title')}</h1>
           <p className="lead nx-muted">Parlons de votre projet.</p>
         </div>
       </section>
