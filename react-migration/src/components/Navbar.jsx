@@ -31,7 +31,7 @@ export default function Navbar({ lang = 'fr' }) {
             <li className="nav-item"><Link className="nav-link" to={`/${lang === 'fr' ? '' : lang + '/'}realisations`}>{t('nav.realisations')}</Link></li>
             <li className="nav-item"><Link className="nav-link" to={`/${lang === 'fr' ? '' : lang + '/'}contact`}>{t('nav.contact')}</Link></li>
           </ul>
-          <select className="form-select form-select-sm ms-3" style={{ width: 'auto' }} defaultValue={lang} aria-label="Choisir la langue" onChange={(e) => {
+          <select id="language-switcher" name="language" className="form-select form-select-sm ms-3" style={{ width: 'auto' }} defaultValue={lang} aria-label="Choisir la langue" onChange={(e) => {
             const target = e.target.value;
             const path = location.pathname.replace(/^\/(fr|en|bm|zh|ru)\//, '/').replace(/^\/(fr|en|bm|zh|ru)$/, '/');
             const prefix = target === 'fr' ? '' : `/${target}`;
